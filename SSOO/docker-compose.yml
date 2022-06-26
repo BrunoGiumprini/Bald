@@ -1,0 +1,22 @@
+version: '3'
+services:
+  autenticacion:
+    build:
+     context: ./
+     dockerfile: DockerFile
+    container_name: autenticacion
+    restart: unless-stopped
+    ports:
+      - "9090:80"
+    volumes:
+      - ./autenticacion:/var/www/html
+  publicidad:
+    build:
+     context: ./
+     dockerfile: DockerFile
+    container_name: publicidad
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - ./publicidad:/var/www/html
