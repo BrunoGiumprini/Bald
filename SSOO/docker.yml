@@ -1,0 +1,29 @@
+---
+- hosts: all
+  tasks:
+
+    - name: Instalar repositorio epel
+      yum:
+        name:
+          - https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+    - name: Instalar paquetes necesarios
+      yum:
+        name:
+          - mlocate
+          - wget
+          
+    - name: Instalar Docker
+      yum:
+        name:
+          - docker
+          - docker-compose
+
+    - name: Iniciar Docker
+      systemd:
+        state: started
+        name: docker
+        enabled: yes
+
+  become: true
+  become_user: root
