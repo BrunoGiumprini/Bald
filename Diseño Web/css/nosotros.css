@@ -1,0 +1,92 @@
+* { padding: 0;
+    margin: 0;
+}
+
+/*MENU*/
+
+.contenedornav{
+    margin: auto;
+    padding: 0px;
+    font-family: 'Poppins',sans-serif;
+    background-color: black;
+    height: 50px;
+}
+
+
+ul, ol{
+    list-style: none; /*desaparecen puntitos*/
+}
+
+.nav li a{  /*desplegable*/
+    background-color: #000000;
+    color:white;
+    text-decoration: none;
+    padding: 12px 147.9px;
+    height: 30px;
+    display: block;
+    margin: auto;
+
+}
+
+.nav li a:hover{ /*todos los a dentro de li dentro de nav en la seudoclase hover*/
+    background-color: #494f4d;
+}
+
+.nav > li{
+    float: left;  
+}
+
+.nav li ul{
+    display:none;
+    position:absolute;
+    min-width: 140px;
+
+}
+
+.nav li:hover > ul{ /*los li dentro de nav cuando se pase el mouse*/
+    display: block;
+}
+
+.nav li ul li { 
+    position:relative;
+}
+
+.nav li ul li ul{
+    right: -140px;
+    top: 0px;
+}
+
+/*SCROLLBAR*/
+
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 0.1px;
+    background-color: #3d3d3d3f;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #424242;
+    width: 8px;
+    height: 0.1px;
+    border-radius: 2px;
+}
+
+/*BODY*/
+
+body{
+    background-color: black;
+}
+
+.foto{
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    margin-right: 250px;
+    margin-bottom: 100px;
+    border-radius:150px;
+
+}
+
+.integrantes{
+    margin-left: 250px;
+}

@@ -1,0 +1,107 @@
+* { padding: 0;
+    margin: 0;
+}
+
+/*MENU*/
+
+.contenedornav{
+    margin: auto;
+    padding: 0px;
+    font-family: 'Poppins',sans-serif;
+    background-color: black;
+    height: 50px;
+}
+
+
+ul, ol{
+    list-style: none; /*desaparecen puntitos*/
+}
+
+.nav li a{ 
+    background-color: #000000;
+    color:white;
+    text-decoration: none;
+    padding: 12px 148.9px;
+    height: 30px;
+    display: block;
+    margin: auto;
+
+}
+
+.nav li a:hover{ /*todos los a dentro de li dentro de nav en la seudoclase hover*/
+    background-color: #494f4d;
+}
+
+.nav > li{
+    float: left;  
+}
+
+.nav li ul{ /*desplegable*/
+    display:none;
+    position:absolute;
+    min-width: 140px;
+    z-index: 10;
+
+}
+
+.nav li:hover > ul{ /*los li dentro de nav cuando se pase el mouse*/
+    display: block;
+}
+
+.nav li ul li { 
+    position:relative;
+}
+
+.nav li ul li ul{
+    right: -140px;
+    top: 0px;
+}
+
+/*SCROLLBAR*/
+
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 0.1px;
+    background-color: #3d3d3d3f;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #424242;
+    width: 8px;
+    height: 0.1px;
+    border-radius: 2px;
+}
+
+body{
+    background-color: black;
+}
+
+
+.fondo{
+    height: 220px;
+    margin-top: 0px;
+}
+
+.h1deporte{
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 20%;
+    left: 50%;
+    z-index: 1;
+    
+
+}
+
+.pligas{
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    font-family: 'Poppins', sans-serif;
+}
