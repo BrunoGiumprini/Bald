@@ -21,7 +21,7 @@ ul, ol{
     background-color: #000000;
     color:white;
     text-decoration: none;
-    padding: 12px 148.9px;
+    padding: 12px 147.1px;
     height: 30px;
     display: block;
     margin: auto;
@@ -104,4 +104,50 @@ body{
     margin-bottom: 10px;
     margin-left: 30px;
     font-family: 'Poppins', sans-serif;
+}
+
+.boton{
+    height: 100px;
+    width: 400px;
+    border:none;
+}
+
+.imgboton{
+    height: 100px;
+    width: 400px;
+}
+
+/*desplegable de equipos*/
+
+.equiposdes li button{ 
+    display: block;
+    margin: auto;
+}
+
+.equiposdes > li{
+    float: left;  
+}
+
+.equiposdes li ul{ /*desplegable*/
+    display:none;
+    position:absolute;
+    z-index: 10;
+
+}
+
+.equiposdes li:hover > ul{ /*los li dentro de nav cuando se pase el mouse*/
+    display: block;
+}
+
+.equiposdes li ul li { 
+    position:relative;
+}
+
+.equiposdes li ul li ul{
+    right: -140px;
+    top: 0px;
+}
+
+.imagendeporte{
+    opacity: 60%;
 }

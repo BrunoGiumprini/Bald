@@ -9,7 +9,7 @@ body{
 }
 
 form{
-    height: 800px;
+    height: 480px;
     width: 450px;
     background-color: rgba(255,255,255,0.13);
     position: absolute;
@@ -59,8 +59,7 @@ input{
 }
 
 button{
-    margin-top: 30px;
-    margin-bottom: 15px;
+    margin-top: 40px;
     width: 100%;
     background-color: #faf0f0;
     color: #080710;
@@ -69,9 +68,4 @@ button{
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.login{
-    margin-left:135px;
-    
 }
