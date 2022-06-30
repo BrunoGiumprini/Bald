@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="../php/validacion.php" method="post">
+    <form action="../../Prog/registro_form.php" method="post">
         <h3>Registro</h3>
         <label for="nombre"> Nombre </label>
         <input type="text" name="nombre" placeholder="Ingresa tu nombre" maxlength="30">

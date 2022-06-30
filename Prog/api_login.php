@@ -1,8 +1,8 @@
 <?php
 include("conex.php");
 
-$usuario=$_POST['nombre'];
-$contraseña=$_POST['contraseña'];
+$usuario=$_POST['nombreusuario'];
+$contraseña=$_POST['password'];
 
 $consulta = "SELECT * FROM usuarios WHERE nombre='$nombre' and contraseña='$contraseña'";
 $result = mysqli_query($conn, $consulta);

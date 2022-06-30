@@ -15,18 +15,16 @@
       </head>
 <body>
 
-    <form>
+    <form action="../../Prog/api_login.php" method="post">
         <h3>Inicio de Sesion</h3>
 
         <label for = "email"> Nombre de usuario: </label>
         <input type = "text" name = "nombreusuario" maxlength = "30" placeholder = "Ingresa nombre de usuario" > 
 
         <label for = "password"> Contraseña: </label>
-        <input type = "password" placeholder = "Ingresa contrseña" maxlength = "30">
+        <input type = "password" name="password" placeholder = "Ingresa contrseña" maxlength = "30">
 
-        <button>Siguente</button>
-        
-
+        <input type="submit">Siguente</input>
     </form>
 
 </body>
