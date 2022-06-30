@@ -12,19 +12,19 @@
     <form action="../../Prog/registro_form.php" method="post">
         <h3>Registro</h3>
         <label for="nombre"> Nombre </label>
-        <input type="text" name="nombre" placeholder="Ingresa tu nombre" maxlength="30">
+        <input type="text" name="nombre" placeholder="Ingrese nombre" maxlength="30">
         
         <label for="apellido"> Apellido: </label>
-        <input type="text" name="apellido" placeholder="Ingresa tu apellido" maxlength="30">
+        <input type="text" name="nom_usuario" placeholder="Ingresa nombre de usuario" maxlength="30">
 
         <label for="email"> Email: </label>
-        <input type="text" name="email" maxlength="30" placeholder="Ingresa un email"> 
+        <input type="text" name="email" maxlength="30" placeholder="Ingrese email"> 
 
         <label for="nacimiento"> Fecha de Nacimiento: </label>
         <input type="date" name="fechanacimiento"> 
 
         <label for="password"> Contraseña </label>
-        <input type="password" name="password" placeholder="Ingresa una contraseña" maxlength="30">
+        <input type="password" name="password" placeholder="Ingrese contraseña" maxlength="30">
 
         <input type="submit" name="submit" />
     </form>

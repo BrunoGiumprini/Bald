@@ -4,16 +4,14 @@ include("conex.php");
 $usuario=$_POST['nombreusuario'];
 $contraseña=$_POST['password'];
 
-$consulta = "SELECT * FROM usuarios WHERE nombre='$nombre' and contraseña='$contraseña'";
+$consulta = "SELECT * FROM usuarios WHERE nom_usuario='$usuario' AND contrasena='$contraseña'";
 $result = mysqli_query($conn, $consulta);
-
-$filas=mysqli_num_rows($result);
+$filas = mysqli_num_rows($result);
 
 if ($filas) {
-    header("Location: ../index.html");
-}else{
-?>
-    <h1 class="bad">ERROR EN LA AUTENTIFICACIÓN</h1>
-    <?php
+    header("Location: ../Diseño Web/index.html");
+} 
+else {
+    echo '<h1 class="bad">ERROR EN LA AUTENTIFICACIÓN</h1>';
 }
 ?>
