@@ -12,6 +12,6 @@ if ($filas) {
     header("Location: ../Diseño Web/index.html");
 } 
 else {
-    echo '<h1 class="bad">ERROR EN LA AUTENTIFICACIÓN</h1>';
+    echo '<h3 class="bad">ERROR EN LA AUTENTIFICACIÓN</h3>';
 }
 ?>

@@ -1,0 +1,46 @@
+#version=DEVEL
+# System authorization information
+auth --enableshadow --passalgo=sha512
+# Use CDROM installation media
+cdrom
+# Use graphical install
+graphical
+# Run the Setup Agent on first boot
+firstboot --enable
+
+# Keyboard layouts
+keyboard --vckeymap=latam --xlayouts='latam'
+# System language
+lang es_UY.UTF-8
+
+# Network information
+network  --bootproto=dhcp --device=ens33 --onboot=off --ipv6=auto --no-activate
+network  --hostname=localhost.localdomain
+
+# Root password
+rootpw --iscrypted $6$Y6ep.dRlm132SNgh$3UmbnsqwG3zzqqfSLBFT2yFQafVXpV0bUXpqbQTYHkq5ve9Wj0es9QfbaXVLcK7orWmESczFohFNqRGy.dr9X0
+# System services
+services --enabled="chronyd"
+# System timezone
+timezone America/Montevideo --isUtc
+user --groups=wheel --name=proyecto-esi --password=$6$39eRbYUudg2lhDfw$qEXq7Xz36xcxeY0qssOv/aDjObh91wqvb.mqeYRy1aZnEosk6nZYIODkU4Uaes2jB4v482BVROuISviJo/xlH/ --iscrypted --gecos="proyecto-esi"
+# Disk partitioning information
+part /tmp --fstype="xfs" --ondisk=sda --size=953
+part /var/log --fstype="xfs" --ondisk=sda --size=953
+part /var/lib/docker --fstype="xfs" --ondisk=sda --size=8583
+part swap --fstype="swap" --ondisk=sda --size=190
+part / --fstype="xfs" --ondisk=sda --size=9784
+
+%packages
+@^minimal
+@core
+chrony
+kexec-tools
+
+%end
+
+%addon com_redhat_kdump --enable --reserve-mb='auto'
+
+%end
+
+%anaconda

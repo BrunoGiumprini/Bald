@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
         !empty($date) &&
         !empty($pssw)
     ) {
-        $sql = "INSERT INTO `usuarios`(`nombre`, `nom_usuario`, `email`, `fnac`, `contraseña`) VALUES ('$name','$apellido','$mail','$date','$pssw')";
+        $sql = "INSERT INTO `usuarios`(`nombre`, `nom_usuario`, `email`, `fnac`, `contrasena`) VALUES ('$name','$apellido','$mail','$date','$pssw')";
 
         if (mysqli_query($conn, $sql)) {
             echo "Registrado exitosamente!";
