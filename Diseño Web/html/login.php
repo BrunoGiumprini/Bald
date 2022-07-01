@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>   
     <meta charset = "utf-8">
@@ -12,13 +13,16 @@
     <form action="../../Prog/api_login.php" method="post">
         <h3>Inicio de Sesion</h3>
 
-        <label for = "email"> Nombre de usuario: </label>
+        <label id = "email"> Nombre de usuario: </label>
         <input type = "text" name = "nombreusuario" maxlength = "30" placeholder = "Ingresa nombre de usuario" > 
 
-        <label for="password"> Contraseña: </label>
+        <label id="password"> Contraseña: </label>
         <input type="password" name="password" placeholder = "Ingresa contrseña" maxlength = "30">
 
-        <input type="submit" />
+        <input type="submit"/>
+
+    
+    
     </form>
 
 </body>
