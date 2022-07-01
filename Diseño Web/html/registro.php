@@ -12,24 +12,34 @@
 <body>
     <form action="../../Prog/registro_form.php" method="post">
         <h3>Registro</h3>
-        <label id="nombre"> Nombre: </label>
-        <input type = "text" name="nombre" placeholder="Ingrese nombre" maxlength="30">
+        <div class="line"></div>
+        <section class="error">
+            <?php 
+                session_start();
+                if(isset($_SESSION['errorMsg'])) {
+                    echo '<p>' . $_SESSION['errorMsg'] . '</p>';
+                    unset($_SESSION['errorMsg']);
+                }
+            ?>
+        </section>
         
         <label id="apellido"> Nombre de usuario: </label>
-        <input type="text" name="nom_usuario" placeholder="Ingresa nombre de usuario" maxlength="30">
+        <input type="text" name="nom_usuario" placeholder="Ingrese su nombre de usuario" maxlength="30">
 
-        <label id="email"> Email: </label>
-        <input type="text" name="email" maxlength="30" placeholder="Ingrese email"> 
+        <label id="email"> Correo electrónico: </label>
+        <input type="text" name="email" maxlength="30" placeholder="Ingrese su correo electrónico"> 
 
-        <label id="nacimiento"> Fecha de Nacimiento: </label>
-        <input type="date" name="fechanacimiento"> 
+        <label id="nacimiento"> Fecha de nacimiento: </label>
+        <input type="date" class="datepicker" name="fechanacimiento"> 
 
         <label id="password"> Contraseña </label>
-        <input type="password" name="password" placeholder="Ingrese contraseña" maxlength="30">
+        <input type="password" name="password" placeholder="Ingrese su contraseña" maxlength="30">
 
-        <input type = "submit" name = "submit"/>
+        <input type="submit" class="submit" value="Registrarse" />
 
-        <a href = "login.php" class = "login"> Iniciar Sesión </a>
+        <section class="has-account">
+            <p>¿Ya estás registrado? <a href="login.php">Iniciar sesión</a>.</p>
+        </section>
 
     </form>
 </body>

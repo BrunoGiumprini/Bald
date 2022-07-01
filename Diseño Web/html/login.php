@@ -11,17 +11,29 @@
 <body>
 
     <form action="../../Prog/api_login.php" method="post">
-        <h3>Inicio de Sesion</h3>
+        <h3>Iniciar sesión</h3>
+        <div class="line"></div>
+        <section class="error">
+            <?php 
+                session_start();
+                if(isset($_SESSION['errorMsg'])) {
+                    echo '<p>' . $_SESSION['errorMsg'] . '</p>';
+                    unset($_SESSION['errorMsg']);
+                }
+            ?>
+        </section>
 
         <label id = "email"> Nombre de usuario: </label>
-        <input type = "text" name = "nombreusuario" maxlength = "30" placeholder = "Ingresa nombre de usuario" > 
+        <input type = "text" name = "nombreusuario" maxlength = "30" placeholder = "Ingresa tu usuario"> 
 
         <label id="password"> Contraseña: </label>
-        <input type="password" name="password" placeholder = "Ingresa contrseña" maxlength = "30">
+        <input type="password" name="password" placeholder = "Ingresa tu contraseña" maxlength = "30">
 
-        <input type="submit"/>
+        <input type="submit" class="submit" value="Ingresar" />
 
-    
+        <section class="no-account">
+            <p>¿No tienes cuenta? <a href="registro.php">Regístrate</a> ahora mismo.</p>
+        </section>
     
     </form>
 
