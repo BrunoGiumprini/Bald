@@ -1,23 +1,16 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$base_de_datos = "ejemplo";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $base_de_datos);
-
+include("conex.php");
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 } else {
-  $sql = "SELECT * FROM persona";
+  $sql = "SELECT * FROM banners ORDER BY RAND() LIMIT 1"; 
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
     // output data of each row
     while ($row = $result->fetch_assoc()) {
-      $datos = "id: " . $row["id"] . ", Nombre: " . $row["nombre"] . ", link: " . $row["link"];
+      $datos = "Id: " . $row["id"] . ", Nombre: " . $row["nombre"] . ", URL: " . $row["url"] . ", Imagen: " . $row["imagen"];
     }
 
     $json_mensaje = json_encode($datos);
