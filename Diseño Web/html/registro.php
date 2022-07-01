@@ -29,7 +29,7 @@
 
         <input type = "submit" name = "submit"/>
 
-        <a href = "../html/login.html" class = "login"> Iniciar Sesión </a>
+        <a href = "login.php" class = "login"> Iniciar Sesión </a>
 
     </form>
 </body>
