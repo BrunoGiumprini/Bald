@@ -12,10 +12,10 @@
 <body>
     <form action="../../Prog/registro_form.php" method="post">
         <h3>Registro</h3>
-        <label id="nombre"> Nombre </label>
-        <input type="text" name="nombre" placeholder="Ingrese nombre" maxlength="30">
+        <label id="nombre"> Nombre: </label>
+        <input type = "text" name="nombre" placeholder="Ingrese nombre" maxlength="30">
         
-        <label id="apellido"> Apellido: </label>
+        <label id="apellido"> Nombre de usuario: </label>
         <input type="text" name="nom_usuario" placeholder="Ingresa nombre de usuario" maxlength="30">
 
         <label id="email"> Email: </label>
