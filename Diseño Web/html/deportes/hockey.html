@@ -1,63 +1,476 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    
 
-    <meta charset = "utf-8">
+    <title>Hockey - Clutch</title>
+    <link rel="icon" href="../../img/logo.png">
 
-    <title>Hockey</title>
-  
-    <link rel = "stylesheet" href = "../../css/deporte.css">
-    
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="../../css/deporte.css">
+
+    <!--comportamiento responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 
-      </head>
-<body>
+    <!--BOOTSTRAP-->
+    <!--CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
 
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap">
+
+</head>
+
+<body style="background-color: #000000;">
     <!--MENU-->
-<header>
-    <nav>
-        <div class = "contenedornav">
+    <header>
 
-        <ul class = "nav">
-            
-            <li><a href = "../../index.html">Inicio</a></li>
+        <!--NACEGADOR-->
+        <nav class="navbar navbar-dark fixed-top " style="background-color: #000000;">
+            <div class="container-fluid ">
+                <a class="nav-link active " aria-current="page" href="../../index.html"
+                    style="color: #ffffff;">Inicio</a>
+                <a class="nav-link active" aria-current="page" href="../nosotros.html"
+                    style="color: #ffffff;">Premium</a>
+                <a class="nav-link active" aria-current="page" href="../contacto.html"
+                    style="color: #ffffff;">Contacto</a>
 
-            <li><a href="#">Deportes</a>
-                <ul>
-                <li><a href = "hockey.html">Hockey</a></li>
-                <li><a href = "handball.html">Handball</a></li>
-                <li><a href = "futbol.html">Football</a></li>
-                <li><a href = "basket.html">Basketball</a></li>
-                <li><a href = "voley.html">Voleyball</a></li>
-                <li><a href = "f1.html">Formula 1</a></li>
-                <li><a href = "boxeo.html">Boxeo</a></li>
-                <li><a href = "karate.html">Karate</a></li>
-                <li><a href = "natacion.html">Natación</a></li>
-                <li><a href = "tenis.html">Tenis</a></li>
-                <li><a href = "csgo.html">CSGO esports</a></li>
-                <li><a href = "lol.html">League of Legends esports</a></li>
-                </ul>
-            </li>
-            
-            <li><a href="../../html/nosotros.html">Nosotros</a></li>
-            
-            <li><a href="../../html/login.php">Usuario</a></li>
+                <div class="navbar-toggler">
+                    <!--login-->
+                    <a class="navbar-brand" href="../usuario.html">
+                        <img src="../../img/iconousuario.png" alt="" width="30" height="30">
+                    </a>
+                    <!--seguidos-->
+                    <a class="navbar-brand" href="#">
+                        <img src="../../img/estrella.webp" alt="" width="30" height="30">
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel" style="background-color: #000000;">
+
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel" style="color: #0084ff;">Deportes</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="basket.html">Basketball</a>
+                                <a class="nav-link active" aria-current="page" href="boxeo.html">Boxeo</a>
+                                <a class="nav-link active" aria-current="page" href="futbol.html">Football</a>
+                                <a class="nav-link active" aria-current="page" href="handball.html">Handball</a>
+                                <a class="nav-link active" aria-current="page" href="hockey.html">Hockey</a>
+                                <a class="nav-link active" aria-current="page" href="karate.html">Karate</a>
+                                <a class="nav-link active" aria-current="page" href="natacion.html">Natación</a>
+                                <a class="nav-link active" aria-current="page" href="tenis.html">Tenis</a>
+                                <a class="nav-link active" aria-current="page" href="voley.html">Volleyaball</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div>
+            <img src="../../img/banner/bannerhockey.png" class="img-fluid" alt="...">
+            <h1 class="text-center imagen">HOCKEY</h1>
+        </div>
+
+        <br><br><br><br><br><br><br>
+        <!--LIGAS DESPLEGABLES-->
         
-        </ul>
-    </div>
-    </nav>
+        <h4 class="text-center imagen">Todas las ligas de la a-z</h4><br>
 
-    <div class = "nomdeporte">
-        <img src = "../../img/banner/bannerhockey.png" alt="fondo" class = "imagendeporte">
-        <h1 CLASS = "h1deporte"> HOCKEY </h1>
-    </div>
+        <div class="accordion accordion-flushd-grip gap-2 col-6 mx-auto" id="accordionFlushExample">
 
-    <div class = "nomligas">
-        <p class = "pligas"> Ligas por paises y continentes </p>
-    </div>
-</header>
-     
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        <img src="../../img/banderas/akemania.png" class="img-fluid" alt="..." style="height: 30px;">
+                        Alemania
+                    </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">DEL</a></div>
+                    <div class="accordion-body"><a href="" class="textito">DEL 2</a></div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingEight">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                        <img src="../../img/banderas/mundi.png" class="img-fluid" alt="..." style="width: 55px;">
+                        Asia
+                    </button>
+                </h2>
+                <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">Asia League</a></div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingNine">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                        <img src="../../img/banderas/australia.png" class="img-fluid" alt="..." style="height: 30px;" >
+                        Australia
+                    </button>
+                </h2>
+                <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">AIHL</a></div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTen">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                        <img src="../../img/banderas/austria.png" class="img-fluid" alt="..." style="height: 30px;">
+                        Austria
+                    </button>
+                </h2>
+                <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">Bet-at-home ICE Hockey League</a></div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingEleven">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
+                        <img src="../../img/banderas/belgica.png.png" class="img-fluid" alt="..." style="height: 30px;">
+                        Bélgica
+                    </button>
+                </h2>
+                <div id="flush-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-headingEleven"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">Elite League</a></div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwelve">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                        <img src="../../img/banderas/bielorrusia.png" class="img-fluid" alt="..." style="height: 30px;">
+                        Bielorrusia
+                    </button>
+                </h2>
+                <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">Extraliga</a></div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSixteen">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseSixteen" aria-expanded="false" aria-controls="flush-collapseSixteen">
+                        <img src="../../img/banderas/canada.png" class="img-fluid" alt="..." style="height: 30px;">
+                        Canadá
+                    </button>
+                </h2>
+                <div id="flush-collapseSixteen" class="accordion-collapse collapse" aria-labelledby="flush-headingSixteen"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">OHL</a></div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwentyfour">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwentyfour" aria-expanded="false" aria-controls="flush-collapseTwentyfour">
+                        <img src="../../img/banderas/dinamarca.png" class="img-fluid" alt="..." style="height: 30px;">
+                        Dinamarca
+                    </button>
+                </h2>
+                <div id="flush-collapseTwentyfour" class="accordion-collapse collapse" aria-labelledby="flush-headingTwentyfour"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">Ligaen</a></div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwentyseven">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwentyseven" aria-expanded="false" aria-controls="flush-collapseTwentyseven">
+                        <img src="../../img/banderas/eslovaquia.png" class="img-fluid" alt="..." style="height: 30px;">
+                        Eslovaquia
+                    </button>
+                </h2>
+                <div id="flush-collapseTwentyseven" class="accordion-collapse collapse" aria-labelledby="flush-headingTwentyseven"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">Extraliga</a></div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThirty">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThirty" aria-expanded="false" aria-controls="flush-collapseThirty">
+                        <img src="../../img/banderas/usa.png" class="img-fluid" alt="..." style="height: 30px;">
+                        Estados Unidos
+                    </button>
+                </h2>
+                <div id="flush-collapseThirty" class="accordion-collapse collapse" aria-labelledby="flush-headingThirty"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">NHL</a></div>
+                    <div class="accordion-body"><a href="" class="textito">AHL</a></div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThirtytwo">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThirtytwo" aria-expanded="false" aria-controls="flush-collapseThirtytwo">
+                        <img src="../../img/banderas/mundi.png" class="img-fluid" alt="..." style="width: 55px;">
+                        Europa
+                    </button>
+                </h2>
+                <div id="flush-collapseThirtytwo" class="accordion-collapse collapse" aria-labelledby="flush-headingThirtytwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">Champions Hockey League</a></div>
+                    <div class="accordion-body"><a href="" class="textito">Continental Cup</a></div>
+                    <div class="accordion-body"><a href="" class="textito">European Trophy</a></div>
+                    <div class="accordion-body"><a href="" class="textito">Euro Hockey Tour</a></div>
+                    <div class="accordion-body"><a href="" class="textito">Euro Ice Hockey Challenge</a></div>
+                    <div class="accordion-body"><a href="" class="textito">Inter-National-League</a></div>
+                    <div class="accordion-body"><a href="" class="textito">International Tournaments</a></div>
+                    <div class="accordion-body"><a href="" class="textito">Karjala Cup</a></div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThirtyfour">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThirtyfour" aria-expanded="false" aria-controls="flush-collapseThirtyfour">
+                        <img src="../../img/banderas/finlandia.png" class="img-fluid" alt="..." style="height: 30px;">
+                        Finlandia
+                    </button>
+                </h2>
+                <div id="flush-collapseThirtyfour" class="accordion-collapse collapse" aria-labelledby="flush-headingThirtyfour"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">Liiga</a></div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThirtyfive">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThirtyfive" aria-expanded="false" aria-controls="flush-collapseThirtyfive">
+                        <img src="../../img/banderas/francia.png" class="img-fluid" alt="..." style="height: 30px;">
+                        Francia
+                    </button>
+                </h2>
+                <div id="flush-collapseThirtyfive" class="accordion-collapse collapse" aria-labelledby="flush-headingThirtyfive"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">Ligue Magnus</a></div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFourty">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFourty" aria-expanded="false" aria-controls="flush-collapseFourty">
+                        <img src="../../img/banderas/reinounido.png" class="img-fluid" alt="..." style="height: 30px;">
+                        Inglaterra
+                    </button>
+                </h2>
+                <div id="flush-collapseFourty" class="accordion-collapse collapse" aria-labelledby="flush-headingFourty"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">Elite League</a></div>
+            </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThirtyeight">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThirtyeight" aria-expanded="false" aria-controls="flush-collapseThirtyeight">
+                        <img src="../../img/banderas/mundi.png" class="img-fluid" alt="..." style="width: 55px;">
+                        Internacional
+                    </button>
+                </h2>
+                <div id="flush-collapseThirtyeight" class="accordion-collapse collapse" aria-labelledby="flush-headingThirtyeight"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">Friendly</a></div>
+                    <div class="accordion-body"><a href="" class="textito">World Championship U20</a></div>
+                    <div class="accordion-body"><a href="" class="textito">World Championship (W)</a></div>
+                    <div class="accordion-body"><a href="" class="textito">Olympics</a></div>
+                    <div class="accordion-body"><a href="" class="textito">Olympics (W)</a></div>
+                    <div class="accordion-body"><a href="" class="textito">IIHF World Championship</a></div>
+                    <div class="accordion-body"><a href="" class="textito">Olympic Games - Qualification</a></div>
+                    <div class="accordion-body"><a href="" class="textito">IIHF World Championship</a></div>
+                    <div class="accordion-body"><a href="" class="textito">Tatra Cup</a></div>
+                    <div class="accordion-body"><a href="" class="textito">Polesie Cup</a></div>
+                    <div class="accordion-body"><a href="" class="textito">Pannon Hoki Gala</a></div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFourtyone">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFourtyone" aria-expanded="false" aria-controls="flush-collapseFourtyone">
+                        <img src="../../img/banderas/italia.png" class="img-fluid" alt="..." style="height: 30px;">
+                        Italia
+                    </button>
+                </h2>
+                <div id="flush-collapseFourtyone" class="accordion-collapse collapse" aria-labelledby="flush-headingFourtyone"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">Serie A</a></div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFourtytwo">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFourtytwo" aria-expanded="false" aria-controls="flush-collapseFourtytwo">
+                        <img src="../../img/banderas/letonia.png" class="img-fluid" alt="..." style="height: 30px;">
+                        Letonia
+                    </button>
+                </h2>
+                <div id="flush-collapseFourtytwo" class="accordion-collapse collapse" aria-labelledby="flush-headingFourtytwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">LHL</a></div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFourtyseven">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFourtyseven" aria-expanded="false" aria-controls="flush-collapseFourtyseven">
+                        <img src="../../img/banderas/noruega.png" class="img-fluid" alt="..." style="height: 30px;">
+                        Noruega
+                    </button>
+                </h2>
+                <div id="flush-collapseFourtyseven" class="accordion-collapse collapse" aria-labelledby="flush-headingFourtyseven"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">Eliteserien</a></div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFiftyone">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFiftyone" aria-expanded="false" aria-controls="flush-collapseFiftyone">
+                        <img src="../../img/banderas/polonia.png" class="img-fluid" alt="..." style="height: 30px;">
+                        Polonia
+                    </button>
+                </h2>
+                <div id="flush-collapseFiftyone" class="accordion-collapse collapse" aria-labelledby="flush-headingFiftyone"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">Polish League</a></div>
+                    <div class="accordion-body"><a href="" class="textito">Cup</a></div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFiftyfive">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFiftyfive" aria-expanded="false" aria-controls="flush-collapseFiftyfive">
+                        <img src="../../img/banderas/republicacheca.png" class="img-fluid" alt="..." style="height: 30px;">
+                        Republica Checa
+                    </button>
+                </h2>
+                <div id="flush-collapseFiftyfive" class="accordion-collapse collapse" aria-labelledby="flush-headingFiftyfive"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">Extraliga</a></div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFiftyseven">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFiftyseven" aria-expanded="false" aria-controls="flush-collapseFiftyseven">
+                        <img src="../../img/banderas/rusia.png" class="img-fluid" alt="..." style="height: 30px;">
+                        Rusia
+                    </button>
+                </h2>
+                <div id="flush-collapseFiftyseven" class="accordion-collapse collapse" aria-labelledby="flush-headingFiftyseven"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">KHL</a></div>
+                    <div class="accordion-body"><a href="" class="textito">VHL</a></div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSixty">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseSixty" aria-expanded="false" aria-controls="flush-collapseSixty">
+                        <img src="../../img/banderas/suecia.png" class="img-fluid" alt="..." style="height: 30px;">
+                        Suecia
+                    </button>
+                </h2>
+                <div id="flush-collapseSixty" class="accordion-collapse collapse" aria-labelledby="flush-headingSixty"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">HockeyAllsvenskan</a></div>
+                    <div class="accordion-body"><a href="" class="textito">SHL</a></div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSixtyone">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseSixtyone" aria-expanded="false" aria-controls="flush-collapseSixtyone">
+                        <img src="../../img/banderas/suiza.png" class="img-fluid" alt="..." style="height: 30px;">
+                        Suiza
+                    </button>
+                </h2>
+                <div id="flush-collapseSixtyone" class="accordion-collapse collapse" aria-labelledby="flush-headingSixtyone"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">National League</a></div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSixtyseven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseSixtyseven" aria-expanded="false" aria-controls="flush-collapseSixtyseven">
+                        <img src="../../img/banderas/ucrania.png" class="img-fluid" alt="..." style="height: 30px;">
+                        Ucrania
+                    </button>
+                </h2>
+                <div id="flush-collapseSixtyseven" class="accordion-collapse collapse" aria-labelledby="flush-headingSixtyseven"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">Superleague</a></div>
+                </div>
+            </div>
+
+            
+            <!--AL FIN LOCO-->
+
+        </div>
 </body>
+
+</html>
