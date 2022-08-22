@@ -1,103 +1,330 @@
 <!DOCTYPE html>
-<html lang = "es">
-    <head>
+<html lang="es">
 
-        <title>nosotros</title>
+<head>
 
-        <meta charset = "utf-8">
+    <title>Clutch Premium</title>
+    <link rel="icon" href="../img/logo.png">
 
-        <link rel="stylesheet" href="../css/nosotros.css">
+    <meta charset="utf-8">
 
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-    
-    </head>
-    
+    <link rel="stylesheet" href="../css/nosotros.css">
+
+    <!--iconos-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!--comportamiento responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+    <!--BOOTSTRAP-->
+    <!--CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap">
+
+</head>
+
 <body>
     <!--MENU-->
-<header>
-    <nav>
-        <div class = "contenedornav">
+    <header>
+        <!--NACEGADOR-->
+        <nav class="navbar navbar-dark fixed-top " style="background-color: #000000;">
+            <div class="container-fluid ">
+                <a class="nav-link active " aria-current="page" href="../index.html" style="color: #ffffff;">Inicio</a>
+                <a class="nav-link active" aria-current="page" href="#" style="color: #ffffff;">Premium</a>
+                <a class="nav-link active" aria-current="page" href="contacto.html" style="color: #ffffff;">Contacto</a>
 
-            <ul class = "nav">
-            
-                <li><a href="../index.html">Inicio</a></li>
-    
-                <li><a href="#">Deportes</a>
-                    <ul>
-                    <li><a href = "../html/deportes/hockey.html">Hockey</a></li>
-                    <li><a href = "../html/deportes/handabll.html">Handball</a></li>
-                    <li><a href = "../html/deportes/futbol.html">Football</a></li>
-                    <li><a href = "../html/deportes/basket.html">Basketball</a></li>
-                    <li><a href = "../html/deportes/voley.html">Voleyball</a></li>
-                    <li><a href = "../html/deportes/f1.html">Formula 1</a></li>
-                    <li><a href = "../html/deportes/boxeo.html">Boxeo</a></li>
-                    <li><a href = "../html/deportes/karate.html">Karate</a></li>
-                    <li><a href = "../html/deportes/natacion.html">Natación</a></li>
-                    <li><a href = "../html/deportes/tenia.html">Tenis</a></li>
-                    <li><a href = "../html/deportes/csgo.html">CSGO esports</a></li>
-                    <li><a href = "../html/deportes/lol.html">League of Legends esports</a></li>
-                    </ul>
-                </li>
-                
-                <li> <a href="nosotros.html">Nosotros</a></li>
-                
-                <li> <a href = "../../Diseño Web/html/registro.php">Usuario </a></li>
-            
-            </ul>
-    </div>
-    </nav>
-</header>
+                <div class="navbar-toggler">
+                    <!--login-->
+                    <a class="navbar-brand" href="usuario.html">
+                        <img src="../img/iconousuario.png" alt="" width="30" height="30">
+                    </a>
+                    <!--seguidos-->
+                    <a class="navbar-brand" href="#">
+                        <img src="../img/estrella.webp" alt="" width="30" height="30">
+                    </a>
 
-<div class = "textonosotros"> 
-    <br><br>
-    <h1 class = "titulo">BALD</h1> <br>
-   <p class = "textop"> Nuestra misión es desarrollar con la más alta calidad posible diversas herramientas en un entorno amigable para el usuario, donde este se sienta cómodo utilizando un software práctico y funcional, el cual será creado por nuestros desarrolladores utilizando técnicas eficaces y funcionales.
-    <br> Nos caracterisamos por nuestos valores como: puntualidad, perfección y respeto al cliente
-   </p>
-</div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel" style="background-color: #000000;">
 
-<div class = "integrantes">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel" style="color: #0084ff;">Deportes</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                    href="deportes/basket.html">Basketball</a>
+                                <a class="nav-link active" aria-current="page" href="deportes/rugby.html">Rugby</a>
+                                <a class="nav-link active" aria-current="page" href="deportes/futbol.html">Football</a>
+                                <a class="nav-link active" aria-current="page"
+                                    href="deportes/handball.html">Handball</a>
+                                <a class="nav-link active" aria-current="page" href="deportes/hockey.html">Hockey</a>
+                                <a class="nav-link active" aria-current="page" href="deportes/karate.html">Karate</a>
+                        
+                                <a class="nav-link active" aria-current="page"
+                                    href="deportes/natacion.html">Natación</a>
+                                <a class="nav-link active" aria-current="page" href="deportes/tenis.html">Tenis</a>
+                                <a class="nav-link active" aria-current="page"
+                                    href="deportes/voley.html">Volleyaball</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <br><br>
+        <header class="fondo">
+            <div class="container">
+                <br>
+                <h1 class="texto fw-bold">Sigue a tus equipos sin límite</h1><br>
+                <h4 class="fw-light texto4">Usa la aplicación sin anuncios</h4>
+                <br>
+                <a href="#contenido"><button class="boton btn btn-dark">COMENZAR</button></a>
+                <a href="#contenido"><button class="btn btn-outline-light">VER PLANES</button></a>
+                <br><br><br>
+                <p class="text-muted">
+                    <a href="#" class="text-reset">Se aplican términos y condiciones.</a>.
+                </p>
+                <br>
+            </div>
+        </header>
+        <br><br><br>
 
-    <div class ="grupo1">
-        
-        <div class ="bruno">
-            <img src = "../img/bruno.jpg" alt = "integrante" class = "foto">
-            <p class = "nombres"> Bruno Giumprini</p>
+        <!--MEJORAR RESPONSIVE-->
+        <div class="container">
+            <h1 class="texto2 text-center fw-bold">Beneficios de Premium</h1> <br>
+        </div>
+        <br><br><br><br>
+
+        <div class="container">
+            <div class="position-relative container">
+
+                <div class="position-absolute top-50 start-0 translate-middle-y text-center">
+                    <img src="../img/iconofollow.png" alt="icono" style="height:150px;" class="imagen">
+                </div>
+
+
+                <div class="position-absolute top-50 start-50 translate-middle">
+                    <img src="../img/sinnuncio.png" alt="icono" style="height:150px;" class="imagen2">
+                </div>
+
+
+                <div class="position-absolute top-50 end-0 translate-middle-y">
+                    <img src="../img/notificacion.png" alt="icono" style="height:150px;" class="imagen3">
+                </div>
+
+
+                <div class="position-absolute top-0 start-0">
+                    <br><br><br><br>
+                    <h5 class="texto2 fw-bold text-center ">Estrella</h5>
+                    <p class="fw-light text-center texto2">Sigue a tus equipos favortios</p>
+                </div>
+
+
+                <div class="position-absolute top-0 start-50 translate-middle-x">
+                    <br><br><br><br>
+                    <h5 class="texto2 fw-bold text-center">Ads free</h5>
+                    <p class="fw-light text-center texto2">Mira todos los resultados deportivos<br> sin anuncios
+                        molestos</p>
+                </div>
+
+                <div class="position-absolute top-0 end-0">
+                    <br><br><br><br>
+                    <h5 class="texto2 fw-bold text-center">Notificaciones</h5>
+                    <p class="fw-light text-center texto2">Recibe notificaciones de tus equipos favoritos</p>
+                </div>
+
+            </div>
         </div>
 
-        <div class = "silvana">
-            <img src = "../img/silvi.jpg" alt = "integrante" class = "foto">
-            <p class = "nombres"> Silvana Mendieta</p> 
-        </div>
-   
-    </div>
-
-    <div class = "grupo2">
-        <div class = "nacho">
-            <img src = "../img/nacho.jpg" alt = "integrante" class = "foto">
-            <p class = "nombres"> Igancio Silva</p>
+        <div class="container contenedor1" id="contenido">
+            <h1 class="texto fw-bold text-center">Elige tu plan premium</h1>
+            <p class="fw-bold text-center">Usa la aplicación sin límites en tu celular, portatil y otros dispositivos
+            </p>
         </div>
 
-        <div class = "mateo">
-            <img src = "../img/mateo.jpg" alt = "integrante" class = "foto">
-            <p class = "nombres"> Mateo Farias</p>
+        <br><br>
+
+        <!--PLANES-->
+
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card border-dark">
+                        <div class="card-body">
+                            <h5 class="fw-bold textotarjeta">Individual</h5>
+                            <p class="ptarjeta">7.99 USD/mes <br> 1 cuenta</p>
+                            <hr>
+                            <p class="texto9"><i class="bi bi-check-lg tic"></i> 1 cuenta Premium</p>
+                            <p class="texto9"><i class="bi bi-check-lg tic"></i> Navega sin anuncios</p><br>
+
+                            <div class="d-grid gap-2 col-4 mx-auto">
+                                <a><button class="btn btn-dark">COMENZAR</button></a><br>
+                            </div>
+                            <p class="text-muted textochico">
+                                <a href="#" class="text-reset">Se aplican términos y condiciones.</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <div class="card border-dark">
+                        <div class="card-body">
+                            <h5 class="fw-bold textotarjeta">Duo</h5>
+                            <p class="ptarjeta">9.99 USD/mes <br> 2 cuentas</p>
+                            <hr>
+                            <p class="texto9"><i class="bi bi-check-lg tic"></i> 2 cuentas Premium para parejas que
+                                conviven</p>
+                            <p class="texto9"><i class="bi bi-check-lg tic"></i> Navega sin anuncios</p><br>
+
+                            <div class="d-grid gap-2 col-4 mx-auto">
+                                <a><button class="btn btn-dark">COMENZAR</button></a><br>
+                            </div>
+                            <p class="text-muted textochico">
+                                <a href="#" class="text-reset">Se aplican términos y condiciones.</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <div class="card border-dark">
+                        <div class="card-body">
+                            <h5 class="fw-bold textotarjeta">Familiar</h5>
+                            <p class="ptarjeta">11.99 USD/mes <br> Hasta 6 cuentas</p>
+                            <hr>
+                            <p class="texto9"><i class="bi bi-check-lg tic"></i> 6 cuentas premium para familias que
+                                conviven</p>
+                            <p class="texto9"><i class="bi bi-check-lg tic"></i> Navega sin anuncios</p><br>
+
+                            <div class="d-grid gap-2 col-4 mx-auto">
+                                <a><button class=" btn btn-dark">COMENZAR</button></a><br>
+                            </div>
+                            <p class="text-muted textochico">
+                                <a href="#" class="text-reset">Se aplican términos y condiciones.</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+        </div>
+
+<!--PIE DE PAGINA-->
+        <footer class="fondo3">
+            <br><br>
+            <div class="container text-center">
+
+                <div class="row">
+                    <div class="col-6 col-sm-3">
+                        <p CLASS="nombre1">COMPAÑIA</p>
+                    </div>
+                    <div class="col-6 col-sm-3">
+                        <p CLASS="nombre1">COMUNIDADES</p>
+                    </div>
+                    <div class="col-6 col-sm-3">
+                        <p CLASS="nombre1">ENLACES ÚTILES</p>
+                    </div>
+
+                    <!-- fila2 -->
+
+                    <div class="w-100"></div>
+
+                    <div class="col-6 col-sm-3">
+                        <a href="" class="nombre">
+                            <p>Acerca de</p>
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-3">
+                        <a href="" class="nombre">
+                            <p>Desarrolladores</p>
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-3">
+                        <a href="" class="nombre">
+                            <p>Ayuda</p>
+                        </a>
+                    </div>
 
 
-<div class = "textopie"> 
-    <br><br>
-        <p class = "textop">  Contacto: proyectobald@gmail.com <br><br></p>
-            <p class = "textop"> &copy; Copyright 2022 BALD </p>
-</div>
+                    <!-- fila3 -->
+
+                    <div class="w-200"></div>
+
+                    <div class="col-6 col-sm-3">
+                        <p CLASS="nombre"></p>
+                    </div>
+                    <div class="col-6 col-sm-3">
+                        <a href="" class="nombre">
+                            <p>Publicidad</p>
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-3">
+                        <a href="" class="nombre">
+                            <p>App movil gratis</p>
+                        </a>
+                    </div>
 
 
+                    <!-- fila4 -->
 
+                    <div class="w-300"></div>
 
+                    <div class="col-6 col-sm-3">
+                        <p CLASS="nombre"></p>
+                    </div>
+                    <div class="col-6 col-sm-3">
+                        <a href="" class="nombre">
+                            <p>Inversionistas</p>
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-3">
+                        <p CLASS="nombre"></p>
+                    </div>
 
+                    <br><br>
+
+                    <!--CPR-->
+                    <p class="pie"><i class="bi bi-globe"></i> Uruguay</p>
+                    <p class="pie"><i class="bi bi-c-circle"></i> 2022 BALD SRL</p>
+
+                </div>
+                <!--LINKS LEGALES-->
+                <div class="container contenedor2">
+                    <a href="#" class="link1">Legal</a>
+                    <a href="#" class="link1">Politica de privacidad</a>
+                    <a href="#" class="link1">Cookies</a>
+                    <a href="#" class="link1">Sobre los anuncios</a> <br>
+                </div>
+                <br>
+        </footer>
 </body>
 
 </html>
