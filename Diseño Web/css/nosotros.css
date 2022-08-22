@@ -1,149 +1,98 @@
-* { padding: 0;
-    margin: 0;
+.fondo{
+    background-color: #1ed760;
 }
 
-/*MENU*/
+.texto{
+    padding-top: 70px;
+}
 
-.contenedornav{
-    margin: auto;
-    padding: 0px;
-    font-family: 'Poppins',sans-serif;
+.texto4{
+    color: white;
+}
+
+.boton{
+    margin-right: 10px;
+}
+
+.texto2{
+    color: black;
+}
+
+.imagen{
+    text-align: center;
+    padding-left: 20px;
+}
+
+.imagen2{
+    text-align: center;
+}
+
+.imagen3{
+    text-align: center;
+    padding-right:90px;
+}
+
+.contenedor1{
+    margin-top: 250px;
+}
+
+.textotarjeta{
+    font-size: 25px;
+}
+
+.tic{
+height: 30px;
+}
+
+.texto9{
+    font-size: 17px;
+}
+
+.textochico{
+    font-size: 12px;
+}
+
+.fondo3{
     background-color: black;
-    height: 50px;
-
+    margin-top: 100px;
 }
 
-
-ul, ol{
-    list-style: none; /*desaparecen puntitos*/
-}
-
-.nav li a{  /*desplegable*/
-    background-color: #000000;
-    color:white;
+.nombre{
+    color: white;
     text-decoration: none;
-    padding: 12px 147.9px;
-    height: 30px;
-    display: block;
-    margin: auto;
+}
+
+.nombre:hover{
+    color: #1ed760;
+}
+
+.nombre1{
+    color: rgb(189, 189, 189);
+}
+
+.table{
+   border: 0px;
+}
+
+.pie{
+    color: rgb(237, 237, 237);
+    font-size: 12px;
+    text-align: right;
 
 }
 
-.nav li a:hover{ /*todos los a dentro de li dentro de nav en la seudoclase hover*/
-    background-color: #494f4d;
+.link1{
+    font-size: 13px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: grey;
 }
 
-.nav > li{
-    float: left;  
+.link1:hover{
+    color: #1ed760;
 }
 
-.nav li ul{
-    display:none;
-    position:absolute;
-    min-width: 140px;
-    z-index: 100;
-
-}
-
-.nav li:hover > ul{ /*los li dentro de nav cuando se pase el mouse*/
-    display: block;
-}
-
-.nav li ul li { 
-    position:relative;
-}
-
-.nav li ul li ul{
-    right: -140px;
-    top: 0px;
-}
-
-/*SCROLLBAR*/
-
-*::-webkit-scrollbar {
-    width: 8px;
-    height: 0.1px;
-    background-color: #3d3d3d3f;
-}
-
-*::-webkit-scrollbar-thumb {
-    background-color: #424242;
-    width: 8px;
-    height: 0.1px;
-    border-radius: 2px;
-}
-
-/*BODY*/
-
-body{
-    background-color: black;
-}
-
-.textonosotros{
-    color: rgb(0, 0, 0);
-    font-family: 'Poppins',sans-serif;
-    background-color: #ffffff;
-    height: 400px;
-    margin-top: 0px;
-    margin-bottom: 100px;
-}
-
-.textop{
-    font-size: 20px;
-    padding: 0px 40px;
-    text-align: center;
-}
-
-.titulo{
-    font-size: 100px;
-    text-align: center;
-}
-
-.textopie{
-    background-color: #424242;
-    font-family: 'Poppins',sans-serif;
-    color: #ffffff;
-    height: 200px;
-    margin-top: 0px;
-}
-
-
-/*imagenes*/
-
-.foto{
-    width: 270px;
-    height: 270px;
-    border-radius: 150px;
-}
-
-.integrantes{
-    margin-left: 250px;
-    height: 600px;
-
-}
-
-.nombres{
-    font-family: 'Poppins',sans-serif;
-    color: #ffffff;
-    margin-left: 70px;
-    margin-bottom: 30px;
-        
-}
-
-.grupo1{
-    transform: translate(5%,-10%);
-    top: 50%;
-    left: 50%;
- 
-   
-
-}
-
-.grupo2{
-    transform: translate(50%, -115%);
-    top: 55%;
-    left: 50%;
-
-
+.contenedor2{
+    text-align: left;
 }
 

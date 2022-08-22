@@ -1,153 +1,44 @@
-* { padding: 0;
-    margin: 0;
-}
+.imagen{
+    position: relative;
+    color:rgb(255, 255, 255);
+    margin-top: -100px;
+    font-family: 'poppins'
 
-/*MENU*/
-
-.contenedornav{
-    margin: auto;
-    padding: 0px;
-    font-family: 'Poppins',sans-serif;
-    background-color: black;
-    height: 50px;
 }
 
 
-ul, ol{
-    list-style: none; /*desaparecen puntitos*/
-}
-
-.nav li a{ 
-    background-color: #000000;
-    color:white;
+.textito{
     text-decoration: none;
-    padding: 12px 147.1px;
-    height: 30px;
-    display: block;
-    margin: auto;
-
+    font-size: 16px;
+    color: black;
 }
 
-.nav li a:hover{ /*todos los a dentro de li dentro de nav en la seudoclase hover*/
-    background-color: #494f4d;
+.textito:hover{
+    color: rgb(38, 0, 255);
 }
 
-.nav > li{
-    float: left;  
+.accordion-button:focus{
+    box-shadow: inherit;
 }
 
-.nav li ul{ /*desplegable*/
-    display:none;
-    position:absolute;
-    min-width: 140px;
-    z-index: 10;
-
+.accordion-item{
+    background-color:#000000;
 }
 
-.nav li:hover > ul{ /*los li dentro de nav cuando se pase el mouse*/
-    display: block;
+.accordion-button::after{
+    filter:brightness(0%) invert(100%);
 }
 
-.nav li ul li { 
-    position:relative;
-}
-
-.nav li ul li ul{
-    right: -140px;
-    top: 0px;
-}
-
-/*SCROLLBAR*/
-
-*::-webkit-scrollbar {
-    width: 8px;
-    height: 0.1px;
-    background-color: #3d3d3d3f;
-}
-
-*::-webkit-scrollbar-thumb {
-    background-color: #424242;
-    width: 8px;
-    height: 0.1px;
-    border-radius: 2px;
-}
-
-body{
-    background-color: black;
-}
-
-
-.fondo{
-    height: 220px;
-    margin-top: 0px;
-}
-
-.h1deporte{
-    color: rgb(255, 255, 255);
-    font-size: 45px;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 20%;
-    left: 50%;
-    z-index: 1;
-    
-
-}
-
-.pligas{
+.accordion-button:not(.collapsed){
+    color: inherit;
+    background-color:#000000;
     color: white;
-    font-size: 20px;
-    text-align: left;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 30px;
-    font-family: 'Poppins', sans-serif;
 }
 
-.boton{
-    height: 100px;
-    width: 400px;
-    border:none;
+.accordion-button:focus{
+    box-shadow: inherit;
 }
 
-.imgboton{
-    height: 100px;
-    width: 400px;
-}
-
-/*desplegable de equipos*/
-
-.equiposdes li button{ 
-    display: block;
-    margin: auto;
-}
-
-.equiposdes > li{
-    float: left;  
-}
-
-.equiposdes li ul{ /*desplegable*/
-    display:none;
-    position:absolute;
-    z-index: 10;
-
-}
-
-.equiposdes li:hover > ul{ /*los li dentro de nav cuando se pase el mouse*/
-    display: block;
-}
-
-.equiposdes li ul li { 
-    position:relative;
-}
-
-.equiposdes li ul li ul{
-    right: -140px;
-    top: 0px;
-}
-
-.imagendeporte{
-    opacity: 60%;
+.img-fluid{
+    padding-right:10px ;
 }
