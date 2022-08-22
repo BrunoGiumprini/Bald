@@ -3,94 +3,348 @@
 
 <head>
     <meta charset="UTF-8">
-   
+
+    <!--comportamiento responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="css/styles.css">
-    
+
+
+    <!--BOOTSTRAP-->
+
+    <!--iconos-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!--CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+
+    <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 
     <title>Clutch</title>
+    <link rel="icon" href="img/logo.png">
 </head>
-<body>
+
+<body style="background-color: #000000;">
+
     <header>
+        <!--NAVEGADOR-->
+            <nav class="navbar navbar-dark fixed-top" style="background-color: #000000;">
+                <div class="container-fluid">
+                    <a class="nav-link active" aria-current="page" href="#" style="color: #ffffff;">Inicio</a>
+                    <a class="nav-link active" aria-current="page" href="html/nosotros.html" style="color: #ffffff;">Premium</a>
+                    <a class="nav-link active" aria-current="page" href="html/contacto.html" style="color: #ffffff;">Contacto</a>
 
-        <nav>
-        <div class = "contenedornav">
 
-        <ul class = "nav">
-            
-            <li><a href="index.html">Inicio</a></li>
 
-            <li><a href="#">Deportes</a>
-                <ul>
-                <li><a href = "../Diseño Web/html/deportes/hockey.html">Hockey</a></li>
-                <li><a href = "../Diseño Web/html/deportes/handabll.html">Handball</a></li>
-                <li><a href = "../Diseño Web/html/deportes/futbol.html">Football</a></li>
-                <li><a href = "../Diseño Web/html/deportes/basket.html">Basketball</a></li>
-                <li><a href = "../Diseño Web/html/deportes/voley.html">Voleyball</a></li>
-                <li><a href = "../Diseño Web/html/deportes/f1.html">Formula 1</a></li>
-                <li><a href = "../Diseño Web/html/deportes/boxeo.html">Boxeo</a></li>
-                <li><a href = "../Diseño Web/html/deportes/karate.html">Karate</a></li>
-                <li><a href = "../Diseño Web/html/deportes/natacion.html">Natación</a></li>
-                <li><a href = "../Diseño Web/html/deportes/tenis.html">Tenis</a></li>
-                <li><a href = "../Diseño Web/html/deportes/csgo.html">CSGO esports</a></li>
-                <li><a href = "../Diseño Web/html/deportes/lol.html">League of Legends esports</a></li>
-                </ul>
-            </li>
-            
-            <li><a href="html/nosotros.html">Nosotros</a></li>
-            
-            <li><a href="html/login.php">Usuario</a></li>
-        
-        </ul>
-    </div>
-    </nav>
-</header>
+                    <div class="navbar-toggler">
+                        <!--login-->
+                        <a class="navbar-brand" href="html/usuario.html">
+                            <img src="img/iconousuario.png" alt="" width="30" height="30">
+                        </a>
+                        <!--seguidos-->
+                        <a class="navbar-brand" href="#">
+                            <img src="img/estrella.webp" alt="" width="30" height="30">
+                        </a>
 
-        <h1>NEWS</h1>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar"
+                        aria-labelledby="offcanvasDarkNavbarLabel" style="background-color: #000000;">
 
-        <div class="contenedor-1">
-            <img src="img/imagenprueba.jpg" alt="posible Imagen" class="imagenprincipal">
+                        <div class="offcanvas-header">
+                            <h4 class="offcanvas-title" id="offcanvasDarkNavbarLabel" style="color: #eeff00;">Deportes
+                                </h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="html/deportes/basket.html">Basketball</a>
+                                    <a class="nav-link active" aria-current="page" href="html/deportes/rugby.html">Rugby</a>
+                                   
+                                    <a class="nav-link active" aria-current="page" href="html/deportes/futbol.html">Football</a>
+                                    <a class="nav-link active" aria-current="page" href="html/deportes/handball.html">Handball</a>
+                                    <a class="nav-link active" aria-current="page" href="html/deportes/hockey.html">Hockey</a>
+                                    <a class="nav-link active" aria-current="page" href="html/deportes/karate.html">Karate</a>
+                                  
+                                    <a class="nav-link active" aria-current="page" href="html/deportes/natacion.html">Natación</a>
+                                    <a class="nav-link active" aria-current="page" href="html/deportes/tenis.html">Tenis</a>
+                                    <a class="nav-link active" aria-current="page" href="html/deportes/voley.html">Volleyaball</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="text-1">
-                <p class = "texto">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto autem dolorum dolorem
-                    quibusdam
-                    deserunt quasi excepturi magni, nisi, natus suscipit repudiandae ex possimus neque! Sit
-                    voluptatibus
-                    ea voluptas id nisi?
-                    Necessitatibus, ratione cum officia velit possimus non voluptatum, quaerat minus eius dolor,
-                    nostrum
-                    aspernatur? Assumenda vel possimus accusamus sequi, voluptas quis aliquam nisi eius quo
-                    voluptatibus. Modi animi similique optio.
-                    Modi a veniam quam in facere reiciendis delectus quia libero consequatur amet qui eaque cum esse
-                    voluptates officia, eius earum vel consectetur. Deserunt eum, distinctio eveniet quos quasi aut
-                    nulla.
-                    Minus assumenda expedita ea a eveniet animi iste vitae pariatur tenetur alias eligendi ratione,
-                    nesciunt dolores. Facilis pariatur, laborum assumenda natus corporis soluta! Natus facilis,
-                    assumenda tempore voluptatum ratione at!
-                    Pariatur vitae sapiente, dignissimos, incidunt labore voluptate animi temporibus sequi quisquam
-                    numquam itaque fuga corporis nobis tempore sed molestias obcaecati alias nulla officia
-                    recusandae
-                    soluta ea vel. Officiis, sint quidem!
-                </p>
+        </nav>
+        <!--cierre contenedor-->
+    </header>
+
+
+    <!--carrusel de imagenes-->
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                class="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                aria-label="Slide 6"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/imagenprueba.jpg" class="d-block w-100" alt="..." height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="img/imagenprueba2.jpeg" class="d-block w-100" alt="..." height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="img/imagenprueba3.jpeg" class="d-block w-100" alt="..." height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="img/imagenprueba4.jpeg" class="d-block w-100" alt="..." height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="img/imagenprueba.jpg" class="d-block w-100" alt="..." height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="img/imagenprueba2.jpeg" class="d-block w-100" alt="..." height="500">
             </div>
         </div>
 
-        <div class="imagenes">
-            <h2>IMAGENES</h2>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
 
-            <img src="img/imagenprueba2.jpeg" alt="Imagen 1" class="img">
-            <img src="img/imagenprueba3.jpeg" alt="Imagen 2" class="img">
-            <img src="img/imagenprueba4.jpeg" alt="Imagen 3" class="img">
-        </div> 
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
-        <!--AGREGAR BANNER DE PUBLICIDAD-->
+    <!--Noticias interactivas-->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <div class="col">
+            <div class="card h-100" style="background-color: #000000;">
+                <img src="img/imagenprueba2.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #eeff00;">Titulo de noticia</h5>
+                    <p class="card-text" style="color: #ffffff;">This is a wider card with supporting text below as a
+                        natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text" style="color: #848383;">Last updated 3 mins ago</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100" style="background-color: #000000;">
+                <img src="img/imagenprueba4.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #eeff00;">Titulo de noticia</h5>
+                    <p class="card-text" style="color: #ffffff;">This is a wider card with supporting text below as a
+                        natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text" style="color: #848383;">Last updated 3 mins ago</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100" style="background-color: #000000;">
+                <img src="img/imagenprueba4.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #eeff00;">Titulo de noticia</h5>
+                    <p class="card-text" style="color: #ffffff;">This is a wider card with supporting text below as a
+                        natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text" style="color: #848383;">Last updated 3 mins ago</small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <br><br><br><br>
+
+    <div class="titulos">
+        <h3 class="titulo" style="color: #ffffff;">Mejores Momentos</h2>
+            <h6 class="titulo" style="color: #848383;"> Vuelve a vivir los mejores momentos
+        </h3>
+    </div>
+    <!--carrusel de videos-->
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+            <div class="card" style="background-color: #000000;">
+                <iframe class="card-img-top" width="560" height="315"
+                    src="https://www.youtube.com/embed/u1r8INoMwxQ?autoplay=1" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+        <div class="col">
+            <div class="card" style="background-color: #000000;">
+                <iframe class="card-img-top" width="560" height="315"
+                    src="https://www.youtube.com/embed/aL5FaVi1Iig?autoplay=1" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+        <div class="col">
+            <div class="card" style="background-color: #000000;">
+                <iframe class="card-img-top" width="560" height="315"
+                    src="https://www.youtube.com/embed/z2bQrQ3GaKk?autoplay=1" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+        <div class="col">
+            <div class="card" style="background-color: #000000;">
+                <iframe class="card-img-top" width="560" height="315"
+                    src="https://www.youtube.com/embed/_tNxOxLq9l8?autoplay=1" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <!--PIE DE PAGINA-->
+    <footer class="fondo3">
+        <br><br>
+        <div class="container text-center">
+
+            <div class="row">
+                <div class="col-6 col-sm-3">
+                    <p CLASS="nombre1">COMPAÑIA</p>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <p CLASS="nombre1">COMUNIDADES</p>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <p CLASS="nombre1">ENLACES ÚTILES</p>
+                </div>
+
+                <!-- fila2 -->
+
+                <div class="w-100"></div>
+
+                <div class="col-6 col-sm-3">
+                    <a href="" class="nombre">
+                        <p>Acerca de</p>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <a href="" class="nombre">
+                        <p>Desarrolladores</p>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <a href="" class="nombre">
+                        <p>Ayuda</p>
+                    </a>
+                </div>
+
+
+                <!-- fila3 -->
+
+                <div class="w-200"></div>
+
+                <div class="col-6 col-sm-3">
+                    <p CLASS="nombre"></p>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <a href="" class="nombre">
+                        <p>Publicidad</p>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <a href="" class="nombre">
+                        <p>App movil gratis</p>
+                    </a>
+                </div>
+
+
+                <!-- fila4 -->
+
+                <div class="w-300"></div>
+
+                <div class="col-6 col-sm-3">
+                    <p CLASS="nombre"></p>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <a href="" class="nombre">
+                        <p>Inversionistas</p>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <p CLASS="nombre"></p>
+                </div>
+
+                <br><br>
+
+                <!--CPR-->
+                <p class="pie"><i class="bi bi-globe"></i> Uruguay</p>
+                <p class="pie"><i class="bi bi-c-circle"></i> 2022 BALD SRL</p>
+
+            </div>
+            <!--LINKS LEGALES-->
+            <div class="container contenedor2">
+                <a href="#" class="link1">Legal</a>
+                <a href="#" class="link1">Politica de privacidad</a>
+                <a href="#" class="link1">Cookies</a>
+                <a href="#" class="link1">Sobre los anuncios</a> <br>
+            </div>
+            <br>
+    </footer>
 
 
 
-        
-    </body>
+
+</body>
 
 </html>
