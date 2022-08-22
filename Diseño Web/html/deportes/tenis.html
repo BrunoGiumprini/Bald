@@ -1,64 +1,214 @@
 <!DOCTYPE html>
-<html lang = "es">
+<html lang="es">
+
 <head>
-    
 
-    <meta charset = "utf-8">
+    <title>Tenis - Clutch</title>
+    <link rel="icon" href="../../img/logo.png">
 
-    <title>Tenis</title>
-  
-    <link rel = "stylesheet" href = "../../css/deporte.css">
-    
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="../../css/deporte.css">
+
+    <!--comportamiento responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 
-      </head>
-<body>
+    <!--BOOTSTRAP-->
+    <!--CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
 
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap">
+
+</head>
+
+<body style="background-color: #000000;">
     <!--MENU-->
-<header>
-    <nav>
-        <div class = "contenedornav">
+    <header>
+        <!--NACEGADOR-->
+        <nav class="navbar navbar-dark fixed-top " style="background-color: #000000;">
+            <div class="container-fluid ">
+                <a class="nav-link active " aria-current="page" href="../../index.html"
+                    style="color: #ffffff;">Inicio</a>
+                <a class="nav-link active" aria-current="page" href="../nosotros.html"
+                    style="color: #ffffff;">Premium</a>
+                <a class="nav-link active" aria-current="page" href="../contacto.html"
+                    style="color: #ffffff;">Contacto</a>
 
-        <ul class = "nav">
-            
-            <li><a href = "../../index.html">Inicio</a></li>
+                <div class="navbar-toggler">
+                    <!--login-->
+                    <a class="navbar-brand" href="../usuario.html">
+                        <img src="../../img/iconousuario.png" alt="" width="30" height="30">
+                    </a>
+                    <!--seguidos-->
+                    <a class="navbar-brand" href="#">
+                        <img src="../../img/estrella.webp" alt="" width="30" height="30">
+                    </a>
 
-            <li><a href="#">Deportes</a>
-                <ul>
-                <li><a href = "hockey.html">Hockey</a></li>
-                <li><a href = "handball.html">Handball</a></li>
-                <li><a href = "futbol.html">Football</a></li>
-                <li><a href = "basket.html">Basketball</a></li>
-                <li><a href = "voley.html">Voleyball</a></li>
-                <li><a href = "f1.html">Formula 1</a></li>
-                <li><a href = "boxeo.html">Boxeo</a></li>
-                <li><a href = "karate.html">Karate</a></li>
-                <li><a href = "natacion.html">Natación</a></li>
-                <li><a href = "tenis.html">Tenis</a></li>
-                <li><a href = "csgo.html">CSGO esports</a></li>
-                <li><a href = "lol.html">League of Legends esports</a></li>
-                </ul>
-            </li>
-            
-            <li><a href="../../html/nosotros.html">Nosotros</a></li>
-            
-            <li><a href="../../html/login.php">Usuario</a></li>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel" style="background-color: #000000;">
+
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel" style="color: #0084ff;">Deportes</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="basket.html">Basketball</a>
+                                <a class="nav-link active" aria-current="page" href="rugby.html">Rugby</a>
+                        
+                                <a class="nav-link active" aria-current="page" href="futbol.html">Football</a>
+                                <a class="nav-link active" aria-current="page" href="handball.html">Handball</a>
+                                <a class="nav-link active" aria-current="page" href="hockey.html">Hockey</a>
+                                <a class="nav-link active" aria-current="page" href="karate.html">Karate</a>
+                                
+                                <a class="nav-link active" aria-current="page" href="natacion.html">Natación</a>
+                                <a class="nav-link active" aria-current="page" href="tenis.html">Tenis</a>
+                                <a class="nav-link active" aria-current="page" href="voley.html">Volleyaball</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div>
+            <img src="../../img/banner/bannertenis.png" class="img-fluid" alt="...">
+            <h1 class="text-center imagen">TENIS</h1>
+        </div>
+
+        <br><br><br><br><br><br><br>
+        <!--LIGAS DESPLEGABLES-->
+        <h4 class="text-center imagen">Todas las ligas de la a-z</h4><br>
+        <div class="accordion accordion-flushd-grip gap-2 col-6 mx-auto" id="accordionFlushExample">
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">  
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        <img src="../../img/banderas/atp.png" class="img-fluid" alt="..." style="height: 30px;">
+                        ATP
+                </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito"></a></div>
+                </div>
+            </div>
+
         
-        </ul>
-    </div>
-    </nav>
 
-    <div class = "nomdeporte">
-        <img src = "../../img/banner/bannertenis.png" alt="fondo" class = "imagendeporte">
-        <h1 CLASS = "h1deporte"> TENIS </h1>
-    </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        <img src="../../img/banderas/atpchallenger.png" class="img-fluid" alt="..." style="height: 30px;">
+                        ATP Challenger
+                    </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito"></a></div>
+                    <div class="accordion-body"><a href="" class="textito"></a></div>
+                </div>
+            </div>
 
-    <div class = "nomligas">
-        <p class = "pligas"> Ligas por paises y continentes </p>
-    </div>
-</header>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingEight">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                        <img src="../../img/banderas/atp.png" class="img-fluid" alt="..." style="height: 30px;">
+                        ATP-D
+                    </button>
+                </h2>
+                <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito"></a></div>
+                </div>
+            </div>
 
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTen">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                        <img src="../../img/banderas/juegosolimpicos.png" class="img-fluid" alt="..." style="height: 32px;">
+                        Juegos Olimpicos
+                    </button>
+                </h2>
+                <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito">HLA</a></div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwelve">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                        <img src="../../img/banderas/wta.png" class="img-fluid" alt="..." style="height: 30px;">
+                        WTA
+                    </button>
+                </h2>
+                <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito"></a></div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwentythree">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwentythree" aria-expanded="false" aria-controls="flush-collapseTwentythree">
+                        <img src="../../img/banderas/wta.png" class="img-fluid" alt="..." style="height: 30px;">
+                        WTA Challenger
+                    </button>
+                </h2>
+                <div id="flush-collapseTwentythree" class="accordion-collapse collapse" aria-labelledby="flush-headingTwentythree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito"></a></div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwentyfour">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwentyfour" aria-expanded="false" aria-controls="flush-collapseTwentyfour">
+                        <img src="../../img/banderas/wta.png" class="img-fluid" alt="..." style="height: 30px;">
+                        WTA-D
+                    </button>
+                </h2>
+                <div id="flush-collapseTwentyfour" class="accordion-collapse collapse" aria-labelledby="flush-headingTwentyfour"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a href="" class="textito"></a></div>
+                </div>
+            </div>
+
+
+        </div>
 </body>
 
+</html>
