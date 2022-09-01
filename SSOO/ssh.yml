@@ -1,0 +1,32 @@
+---
+- hosts: all
+  tasks:
+    - name: Cambiar puerto de SSH
+      ansible.builtin.lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '#Port\ 22'
+        line: Port 5656
+
+    - name: Desactivar Root en SSH
+      ansible.builtin.lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '#PermitRootLogin\ yes'
+        line: PermitRootLogin no
+
+    - name: Desactivar Passwords en SSH
+      ansible.builtin.lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: 'PasswordAuthentication\ yes'
+        line: PasswordAuthentication no
+
+    - name: Restringir usuarios de SSH
+      ansible.builtin.lineinfile:
+        path: /etc/ssh/sshd_configh
+        line: AllowUsers admin
+        create: yes
+
+    - name: Reiniciar SSH
+      systemd:
+        state: restarted
+        name: sshd
+        enabled: yes

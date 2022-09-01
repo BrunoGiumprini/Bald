@@ -1,0 +1,18 @@
+---
+- hosts: all
+  tasks:
+
+    - name: Crear usuario Administrador
+      user: 
+        name: admin
+        comment: Administrador
+        group: wheel  # Grupo que habilita sudo
+        # Password hasheado del usuario
+        password: "9beae568d6c4159cecfaa1c9f8c9c6465e4d6d7dfc78bd8e2cfe1402cbc62741aab62f2953029129a50c30c8adef4fab21e7aca11ceb92f992b5c1aac673939d" # Password hasheada del usuario
+   
+    - name: Agregar clave para Aministrador
+      authorized_key:
+        user: admin # Usuario a agregar la clave publica
+        state: present # Especificar que la clave exista
+        # Clave publica a copiar al servidor para el usuario "admin"
+        key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC61N7bk+dv+HycBE45cQCxWHAGLgrEkAkAKyBEK9QDEUlQ2iegT/2lkl3wUbfteUD7CfMd4P0Kt+ZXd+awrhdLgyfvQI6Nii8hv9vcNQkLLegPhYD7JxTu76kTtPm60bgUMdZTD1IOT/kEDPcvgownemaFk8jP4ssjOuMOL1FYJBenRTGdq/0GaSlL1Tc+8JHcHuhVJGTKl1NF1RWcPETPP41GSZIT8DrxwEQiY/KEb/aDw39Tm6ZUpztTpT7fFekRdgQZLnS5GKfsFc6uSPaeFXSHtkvlYBOcpKZ3ljD/GFUv4eJ94L5LnwhpU9T31TCexi9e9zoGuBgBrUqH4QDzZLY7sInGuPFLMBBV9l8NKK0f3bYR0DVqo2Gnp8BmLqdES4IUVkLbTVR80ypqda4LDpR+j+KWLXFbBjdfh153TBSN5A9Dqe9mWOXmP4oO2wRtFlXM4usX9/XefH2YGjZOcGms3ggS+dAX0p2z8QbAoQFUWnxcGF+4T1RoBFYjWh8= bgiumprini@ubuntu"
