@@ -740,6 +740,8 @@ require_once "../../Prog/conex.php";
         </div>
     </div>
 
+    
+
     <!--modal numero 16 eliminar-->
     <div class="modal fade" id="exampleModalToggle16" aria-hidden="true" aria-labelledby="exampleModalToggleLabel16" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
@@ -766,6 +768,196 @@ require_once "../../Prog/conex.php";
         <a class="btn btn-outline-light" data-bs-toggle="modal" href="#exampleModalToggle13" role="button">Equipo</a>
     </div>
 
+    <!------------------------------------------------------------------------------------------------->
+    <br><br>
+
+    <!--PARTIDO-->
+    <!--modal numero17-->
+    <div class="modal fade" id="exampleModalToggle17" aria-hidden="true" aria-labelledby="exampleModalToggleLabel17"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel17">selecciona una acción</h5>
+                    <!--boton de cerrar-->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!--botones con acciones-->
+                <div class="modal-body">
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-dark d-grid gap-2" data-bs-target="#exampleModalToggle18"
+                            data-bs-toggle="modal">Agregar</button><br>
+                            <button class="btn btn-dark d-grid gap-2" data-bs-target="#exampleModalToggle19"
+                            data-bs-toggle="modal">Modificar</button><br>
+                        <button class="btn btn-dark d-grid gap-2" data-bs-target="#exampleModalToggle20"
+                            data-bs-toggle="modal">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal numero 18 agregar-->
+    <div class="modal fade" id="exampleModalToggle18" aria-hidden="true" aria-labelledby="exampleModalToggleLabel18"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel18">Agregar</h5>
+                    <!--boton cerrar-->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!--form del modal 2-->
+                <div class="modal-body">
+
+                   <!--pedir deporte, deben ser deportes que aparezcan dentro de a bd-->
+                 <p class="textop fw-bold">seleccionar deporte</p>
+                 <div class="input-group mb-3">
+                     <select class="form-select" id="inputGroupSelect01">
+                         <option selected>Seleccionar...</option>
+                         <option value="1">Basketball</option>
+                         <option value="2">Boxeo</option>
+                         <option value="3">Football</option>
+                         <option value="4">Handball</option>
+                         <option value="5">Hockey</option>
+                         <option value="6">Tennis</option>
+                         <option value="7">Rugby</option>
+                         <option value="8">Natación</option>
+                         <option value="9">Volleyball</option>
+                         <option value="10">Fórmula 1</option>
+                     </select>
+                 </div>
+
+                  <!--pedir división-pais, deben ser deportes que aparezcan dentro de a bd-->
+                  <p class="textop fw-bold">seleccionar división-pais</p>
+                  <div class="input-group mb-3">
+                      <select class="form-select" id="inputGroupSelect01">
+                          <option selected>Seleccionar...</option>
+                          <option value="1">africa</option>
+                          <option value="2">internacional</option>
+                          <option value="3">uruguay</option>
+                          <option value="4">asia</option>
+                          <option value="5">alemania</option>
+                      </select>
+                  </div>
+
+                  <!--pedir liga, deben ser deportes que aparezcan dentro de a bd-->
+                  <p class="textop fw-bold">seleccionar liga</p>
+                  <div class="input-group mb-3">
+                      <select class="form-select" id="inputGroupSelect01">
+                          <option selected>Seleccionar...</option>
+                          <option value="1">liga1</option>
+                          <option value="2">liga2</option>
+                          <option value="3">liga3</option>
+                          <option value="4">liga4</option>
+                          <option value="5">liga5</option>
+                      </select>
+                  </div>
+
+                  <p class="textop fw-bold">ingresar equipo 1</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" aria-label="Sizing example input">
+                    </div>
+
+                    <p class="textop fw-bold">ingresar equipo 2</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" aria-label="Sizing example input">
+                    </div>
+
+                  <p class="textop fw-bold">ingresar fecha del partido</p>
+                    <div class="input-group mb-3">
+                        <input type="date" class="form-control" aria-label="Sizing example input">
+                    </div>
+
+                    <p class="textop fw-bold">ingresar un codigo de partido</p>
+                    <div class="input-group mb-3">
+                        <input type="date" class="form-control" aria-label="Sizing example input">
+                    </div>
+
+
+                </div>
+                <!--cierra modal-->
+
+                <!--pie de pag regresar-->
+                <div class="modal-footer">
+                    <button class="btn btn-outline-dark" data-bs-target="#exampleModalToggle"
+                        data-bs-toggle="modal">Regresar</button>
+                    <button type="submit" class="btn btn-dark">Agregar</button>
+                </div>
+            </div>
+        </div>
+    
+
+
+
+
+
+     <!--modal numero 19 modificar-->
+     <div class="modal fade" id="exampleModalToggle19" aria-hidden="true" aria-labelledby="exampleModalToggleLabel19"
+     tabindex="-1">
+     <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h5 class="modal-title" id="exampleModalToggleLabel19">Modificar</h5>
+                 <!--boton cerrar-->
+                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+             </div>
+             <!--form del modal 3-->
+             <div class="modal-body">
+                 <!--pedir codigo, deben ser codigos que aparezcan dentro de a bd-->
+                 <p class="textop fw-bold">ingresar codigo de partido</p>
+                 <div class="input-group mb-3">
+                     <input type="name" class="form-control" aria-label="Sizing example input">
+                 </div>
+
+                 <!--modificar fecha-->
+                 <p class="textop fw-bold">modificar fecha</p>
+                 <div class="input-group mb-3">
+                     <input type="date" class="form-control" aria-label="Sizing example input">
+                 </div>
+
+                 
+
+             <!--pie de pag regresar-->
+             <div class="modal-footer">
+                 <button class="btn btn-outline-dark" data-bs-target="#exampleModalToggle"
+                     data-bs-toggle="modal">Regresar</button>
+                 <button type="submit" class="btn btn-dark">Modificar</button>
+             </div>
+         </div>
+     </div>
+ </div>
+
+
+
+
+    <!--modal numero 20 eliminar-->
+    <div class="modal fade" id="exampleModalToggle20" aria-hidden="true" aria-labelledby="exampleModalToggleLabel20"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel20">Eliminar</h5>
+                    <!--boton cerrar-->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!--form del modal 4-->
+                <div class="modal-body">
+                </div>
+                <!--pie de pag regresar-->
+                <div class="modal-footer">
+                    <button class="btn btn-outline-dark" data-bs-target="#exampleModalToggle"
+                        data-bs-toggle="modal">Regresar</button>
+                    <!--crear popper con js-->
+                    <button type="submit" class="btn btn-dark">Eliminar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--boton de división-->
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <a class="btn btn-outline-light" data-bs-toggle="modal" href="#exampleModalToggle17" role="button">Partido</a>
+    </div>
 
     <!--se debe agregar para que se pueda visualizar los usuarios que 
     hay y pagan el premium, para poder gestionarlos-->
