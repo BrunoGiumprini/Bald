@@ -911,7 +911,7 @@
                         <input type="date" class="form-control" aria-label="Sizing example input">
                     </div>
 
-                    <p class="textop fw-bold">ingresar un codigo de partido</p>
+                    <p class="textop fw-bold">ingresar un codigo de equipo</p>
                     <div class="input-group mb-3">
                         <input type="date" class="form-control" aria-label="Sizing example input">
                     </div>
@@ -928,7 +928,7 @@
                 </div>
             </div>
         </div>
-    
+    </div>
 
 
 
@@ -946,19 +946,39 @@
              </div>
              <!--form del modal 3-->
              <div class="modal-body">
-                 <!--pedir codigo, deben ser codigos que aparezcan dentro de a bd-->
-                 <p class="textop fw-bold">ingresar codigo de partido</p>
+                 <!--pedir deporte, deben ser deportes que aparezcan dentro de a bd-->
+                 <p class="textop fw-bold">seleccionar deporte</p>
                  <div class="input-group mb-3">
-                     <input type="name" class="form-control" aria-label="Sizing example input">
+                     <select class="form-select" id="inputGroupSelect01">
+                         <option selected>Seleccionar...</option>
+                         <option value="1">Basketball</option>
+                         <option value="2">Boxeo</option>
+                         <option value="3">Football</option>
+                         <option value="4">Handball</option>
+                         <option value="5">Hockey</option>
+                         <option value="6">Tennis</option>
+                         <option value="7">Rugby</option>
+                         <option value="8">Natación</option>
+                         <option value="9">Volleyball</option>
+                         <option value="10">Fórmula 1</option>
+                     </select>
                  </div>
 
-                 <!--modificar fecha-->
-                 <p class="textop fw-bold">modificar fecha</p>
+                 <!--modificar nombre del deporte-->
+
+                 <p class="textop fw-bold">modificar nombre del deporte</p>
                  <div class="input-group mb-3">
-                     <input type="date" class="form-control" aria-label="Sizing example input">
+                     <input type="text" class="form-control" aria-label="Sizing example input">
                  </div>
 
-                 
+                 <!--modificar imagen del deporte-->
+                 <p class="textop fw-bold">subir imagen del deporte</p>
+                 <div class="input-group">
+                     <input type="file" class="form-control" id="inputGroupFile04"
+                         aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                     <button class="btn btn-dark" type="button" id="inputGroupFileAddon04">Subir</button>
+                 </div>
+             </div>
 
              <!--pie de pag regresar-->
              <div class="modal-footer">
