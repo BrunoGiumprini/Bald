@@ -12,7 +12,7 @@
         name:
           - mlocate
           - wget
-          
+
     - name: Instalar Docker
       yum:
         name:
@@ -24,6 +24,21 @@
         state: started
         name: docker
         enabled: yes
+    
+    - name: Desactivar SELinux del arranque
+      selinux:
+        state: disabled
 
+    - name: Desactivar SELinux en el momento
+      selinux:
+        policy: targeted
+        state: permissive        
+
+    - name: Apagar Firewalld
+      systemd:
+        state: stopped
+        name: firewalld
+	      enabled: False
+	
   become: true
   become_user: root
