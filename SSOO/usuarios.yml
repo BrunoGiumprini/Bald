@@ -8,7 +8,7 @@
         comment: Administrador
         group: wheel  # Grupo que habilita sudo
         # Password hasheado del usuario
-        password: "9beae568d6c4159cecfaa1c9f8c9c6465e4d6d7dfc78bd8e2cfe1402cbc62741aab62f2953029129a50c30c8adef4fab21e7aca11ceb92f992b5c1aac673939d" # Password hasheada del usuario
+        password: "$6$4AucfaAh$4EEqdpZX4QUUURNiEV.VEJFtrL1IZm6QQsC3VBh.Nz9kt669t9rvtD4vEF8D0W9aYT0B7ghtGB5myGINREBWR1" # Password hasheada del usuario
    
     - name: Agregar clave para Aministrador
       authorized_key:
