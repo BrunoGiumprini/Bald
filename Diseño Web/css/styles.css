@@ -5,7 +5,9 @@
 }
 
 .carousel {
-    margin-top: 60px;
+    margin-top: 70px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .container-fluid {
@@ -68,3 +70,43 @@
     text-align: left;
 }
 
+.tituloo{
+    color: white;
+    font-size: 50px;
+}
+
+.tituloo2{
+    color: rgba(255, 255, 255, 0.801);
+    font-size: 30px;
+
+}
+
+.contenedorprincipal{
+    background: rgba(255, 255, 255, 0.944);
+}
+
+.navegador{
+    background-color: rgb(190, 12, 12);
+}
+
+.aitem{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.aitem:hover{
+    color: rgb(0, 0, 0);
+}
+
+.modal-content{
+    background-color: black;
+}
+
+.textop{
+    margin-left: 8px;
+}
+
+.titulo{
+    color: white;
+}

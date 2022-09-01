@@ -96,3 +96,101 @@ height: 30px;
     text-align: left;
 }
 
+/*equipos detacados*/
+.title{
+    font-size: 30px;
+    color: white;
+}
+.btn-circle.btn-sm {
+    width: 120px;
+    height: 120px;
+    padding: 6px 0px;
+    border-radius: 60px;
+}
+
+/*pie de pagina */
+
+.fondotres{
+    background-color: #222222;
+    margin-top: 20px;
+}
+
+.nombre{
+    color: white;
+    text-decoration: none;
+}
+
+.nombre:hover{
+    color: #1ed760;
+}
+
+.nombre1{
+    color: rgb(189, 189, 189);
+}
+
+.table{
+   border: 0px;
+}
+
+.pie{
+    color: rgb(237, 237, 237);
+    font-size: 12px;
+    text-align: right;
+
+}
+
+.link1{
+    font-size: 13px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: grey;
+}
+
+.link1:hover{
+    color: #1ed760;
+}
+
+.contenedor2{
+    text-align: left;
+}
+
+.tituloo{
+    color: white;
+    font-size: 50px;
+}
+
+.tituloo2{
+    color: rgba(255, 255, 255, 0.801);
+    font-size: 30px;
+
+}
+
+.contenedorprincipal{
+    background: rgba(255, 255, 255, 0.944);
+}
+
+.navegador{
+    background-color: rgb(190, 12, 12);
+}
+
+.aitem{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.aitem:hover{
+    color: rgb(0, 0, 0);
+}
+
+.modal-content{
+    background-color: black;
+}
+
+.textop{
+    margin-left: 8px;
+}
+
+.titulo{
+    color: white;
+}
