@@ -39,11 +39,26 @@
 
 <body style="background-color: #000000;">
 
-    <!--botones para el modal-->
-    <!--LIGA-->
     <br><br>
 
-    <br><h1 class="text-center titulo">BACKOFFICE</h1> <br><br>
+    <br>
+    <h1 class="text-center titulo">BACKOFFICE</h1> <br><br>
+
+    <h3 class="text-center nombre1">Registro de horario</h3>
+    <p class="text-center nombre1">Click the button to display the date.</p>
+
+    <div class="d-grid gap-2 col-2 mx-auto">
+        <button class="btn-outline-secondary btn" onclick="displayDate()">Ver horario de modificación</button>
+    </div>
+
+    <!--js para tirar horario-->
+    <script>
+        function displayDate() {
+            document.getElementById("demo").innerHTML = Date();
+        }
+    </script>
+<br>
+    <p class="text-center nombre1" id="demo"></p><br>
 
     <!--modal para backoffice-->
 
@@ -257,6 +272,7 @@
                 <div class="modal-footer">
                     <button class="btn btn-outline-dark" data-bs-target="#exampleModalToggle"
                         data-bs-toggle="modal">Regresar</button>
+                    <!--crear popper con js-->
                     <button type="submit" class="btn btn-dark">Eliminar</button>
 
                 </div>
@@ -523,6 +539,7 @@
                 <div class="modal-footer">
                     <button class="btn btn-outline-dark" data-bs-target="#exampleModalToggle"
                         data-bs-toggle="modal">Regresar</button>
+                    <!--crear popper con js-->
                     <button type="submit" class="btn btn-dark">Eliminar</button>
 
                 </div>
@@ -577,20 +594,20 @@
                 <div class="modal-body">
 
                     <!--pedir nombre del deporte-->
-                
+
                     <p class="textop fw-bold">ingresar nombre del deporte</p>
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-default">
                     </div>
 
-                     <!--pedir imagen del deporte-->
-                     <p class="textop fw-bold">subir imagen del deporte</p>
-                     <div class="input-group">
-                         <input type="file" class="form-control" id="inputGroupFile04"
-                             aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-                         <button class="btn btn-dark" type="button" id="inputGroupFileAddon04">Subir</button>
-                     </div>
+                    <!--pedir imagen del deporte-->
+                    <p class="textop fw-bold">subir imagen del deporte</p>
+                    <div class="input-group">
+                        <input type="file" class="form-control" id="inputGroupFile04"
+                            aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                        <button class="btn btn-dark" type="button" id="inputGroupFileAddon04">Subir</button>
+                    </div>
 
 
                 </div>
@@ -635,13 +652,13 @@
                         </select>
                     </div>
 
-                   <!--modificar nombre del deporte-->
-                
-                   <p class="textop fw-bold">modificar nombre del deporte</p>
-                   <div class="input-group mb-3">
-                       <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-default">
-                   </div>
+                    <!--modificar nombre del deporte-->
+
+                    <p class="textop fw-bold">modificar nombre del deporte</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default">
+                    </div>
 
                     <!--modificar imagen del deporte-->
                     <p class="textop fw-bold">subir imagen del deporte</p>
@@ -697,6 +714,7 @@
                 <div class="modal-footer">
                     <button class="btn btn-outline-dark" data-bs-target="#exampleModalToggle"
                         data-bs-toggle="modal">Regresar</button>
+                    <!--crear popper con js-->
                     <button type="submit" class="btn btn-dark">Eliminar</button>
 
                 </div>
@@ -708,122 +726,105 @@
         <a class="btn btn-outline-light" data-bs-toggle="modal" href="#exampleModalToggle9" role="button">Deporte</a>
     </div>
 
-     <!------------------------------------------------------------------------------------------------->
-     <br><br>
+    <!------------------------------------------------------------------------------------------------->
+    <br><br>
 
-     <!--EQUIPO-->
-     <!--modal numero13-->
-     <div class="modal fade" id="exampleModalToggle13" aria-hidden="true" aria-labelledby="exampleModalToggleLabel13"
-         tabindex="-1">
-         <div class="modal-dialog modal-dialog-centered">
-             <div class="modal-content">
-                 <div class="modal-header">
-                     <h5 class="modal-title" id="exampleModalToggleLabel13">selecciona una acción</h5>
-                     <!--boton de cerrar-->
-                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                 </div>
-                 <!--botones con acciones-->
-                 <div class="modal-body">
-                     <div class="d-grid gap-2">
-                         <button class="btn btn-dark d-grid gap-2" data-bs-target="#exampleModalToggle14"
-                             data-bs-toggle="modal">Agregar</button><br>
-                         <button class="btn btn-dark d-grid gap-2" data-bs-target="#exampleModalToggle15"
-                             data-bs-toggle="modal">Modificar</button><br>
-                         <button class="btn btn-dark d-grid gap-2" data-bs-target="#exampleModalToggle16"
-                             data-bs-toggle="modal">Eliminar</button>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </div>
-     <!--modal numero 14 agregar-->
-     <div class="modal fade" id="exampleModalToggle14" aria-hidden="true" aria-labelledby="exampleModalToggleLabel14"
-         tabindex="-1">
-         <div class="modal-dialog modal-dialog-centered">
-             <div class="modal-content">
-                 <div class="modal-header">
-                     <h5 class="modal-title" id="exampleModalToggleLabel14">Agregar</h5>
-                     <!--boton cerrar-->
-                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                 </div>
-                 <!--form del modal 2-->
-                 <div class="modal-body">
- 
- 
-                 </div>
-                 <!--cierra modal-->
- 
-                 <!--pie de pag regresar-->
-                 <div class="modal-footer">
-                     <button class="btn btn-outline-dark" data-bs-target="#exampleModalToggle"
-                         data-bs-toggle="modal">Regresar</button>
-                     <button type="submit" class="btn btn-dark">Agregar</button>
-                 </div>
-             </div>
-         </div>
-     </div>
-     <!--modal numero 15 modificar-->
-     <div class="modal fade" id="exampleModalToggle15" aria-hidden="true" aria-labelledby="exampleModalToggleLabel15"
-         tabindex="-1">
-         <div class="modal-dialog modal-dialog-centered">
-             <div class="modal-content">
-                 <div class="modal-header">
-                     <h5 class="modal-title" id="exampleModalToggleLabel15">Modificar</h5>
-                     <!--boton cerrar-->
-                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                 </div>
-                 <!--form del modal 3-->
-                 <div class="modal-body">
-                 </div>
- 
-                 <!--pie de pag regresar-->
-                 <div class="modal-footer">
-                     <button class="btn btn-outline-dark" data-bs-target="#exampleModalToggle"
-                         data-bs-toggle="modal">Regresar</button>
-                     <button type="submit" class="btn btn-dark">Modificar</button>
-                 </div>
-             </div>
-         </div>
-     </div>
- 
-     <!--modal numero 16 eliminar-->
-     <div class="modal fade" id="exampleModalToggle16" aria-hidden="true" aria-labelledby="exampleModalToggleLabel16"
-         tabindex="-1">
-         <div class="modal-dialog modal-dialog-centered">
-             <div class="modal-content">
-                 <div class="modal-header">
-                     <h5 class="modal-title" id="exampleModalToggleLabel16">Eliminar</h5>
-                     <!--boton cerrar-->
-                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                 </div>
-                 <!--form del modal 4-->
-                 <div class="modal-body">
-                 </div>
-                 <!--pie de pag regresar-->
-                 <div class="modal-footer">
-                     <button class="btn btn-outline-dark" data-bs-target="#exampleModalToggle"
-                         data-bs-toggle="modal">Regresar</button>
-                     <button type="submit" class="btn btn-dark">Eliminar</button>
- 
-                 </div>
-             </div>
-         </div>
-     </div>
-     <!--boton de división-->
-     <div class="d-grid gap-2 col-6 mx-auto">
-         <a class="btn btn-outline-light" data-bs-toggle="modal" href="#exampleModalToggle13" role="button">Equipo</a>
-     </div>
+    <!--PUBLICIDAD-->
+    <!--modal numero13-->
+    <div class="modal fade" id="exampleModalToggle13" aria-hidden="true" aria-labelledby="exampleModalToggleLabel13"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel13">selecciona una acción</h5>
+                    <!--boton de cerrar-->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!--botones con acciones-->
+                <div class="modal-body">
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-dark d-grid gap-2" data-bs-target="#exampleModalToggle14"
+                            data-bs-toggle="modal">Agregar</button><br>
+                        <button class="btn btn-dark d-grid gap-2" data-bs-target="#exampleModalToggle16"
+                            data-bs-toggle="modal">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal numero 14 agregar-->
+    <div class="modal fade" id="exampleModalToggle14" aria-hidden="true" aria-labelledby="exampleModalToggleLabel14"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel14">Agregar</h5>
+                    <!--boton cerrar-->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!--form del modal 2-->
+                <div class="modal-body">
+
+                    <p class="textop fw-bold">subir imagen publicitaria</p>
+                    <div class="input-group">
+                        <input type="file" class="form-control" id="inputGroupFile04"
+                            aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                        <button class="btn btn-dark" type="button" id="inputGroupFileAddon04">Subir</button>
+                    </div>
 
 
-<!--se debe agregar para que se pueda visualizar los usuarios que 
+                </div>
+                <!--cierra modal-->
+
+                <!--pie de pag regresar-->
+                <div class="modal-footer">
+                    <button class="btn btn-outline-dark" data-bs-target="#exampleModalToggle"
+                        data-bs-toggle="modal">Regresar</button>
+                    <button type="submit" class="btn btn-dark">Agregar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--modal numero 16 eliminar-->
+    <div class="modal fade" id="exampleModalToggle16" aria-hidden="true" aria-labelledby="exampleModalToggleLabel16"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel16">Eliminar</h5>
+                    <!--boton cerrar-->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!--form del modal 4-->
+                <div class="modal-body">
+                </div>
+                <!--pie de pag regresar-->
+                <div class="modal-footer">
+                    <button class="btn btn-outline-dark" data-bs-target="#exampleModalToggle"
+                        data-bs-toggle="modal">Regresar</button>
+                    <!--crear popper con js-->
+                    <button type="submit" class="btn btn-dark">Eliminar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--boton de división-->
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <a class="btn btn-outline-light" data-bs-toggle="modal" href="#exampleModalToggle13" role="button">Publicidad</a>
+    </div>
+
+
+    <!--se debe agregar para que se pueda visualizar los usuarios que 
     hay y pagan el premium, para poder gestionarlos-->
 
 
     <!--boton de regresar-->
     <br><br><br>
     <div class="d-grid gap-2 col-2 mx-auto">
-    <input type="button" class="btn btn-light" value="Volver" onClick="history.go(-1);">
-</div>
+        <input type="button" class="btn btn-light" value="Volver" onClick="history.go(-1);">
+    </div>
 
 
 </body>
