@@ -19,6 +19,8 @@
 -- Table structure for table `acerca`
 --
 
+USE clutchdb;
+
 DROP TABLE IF EXISTS `acerca`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -31,8 +33,7 @@ CREATE TABLE `acerca` (
   KEY `fk_acercajuega_idx` (`HoraComienzo`,`DondeSeJuega`,`Fecha`),
   CONSTRAINT `fk_acercajuega` FOREIGN KEY (`HoraComienzo`, `DondeSeJuega`, `Fecha`) REFERENCES `juega` (`HoraComienzo`, `DondeSeJuega`, `Fecha`),
   CONSTRAINT `fk_acercanotificacion` FOREIGN KEY (`IdNotificacion`) REFERENCES `notificacion` (`idNotificacion`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+);
 
 --
 -- Dumping data for table `acerca`
@@ -60,8 +61,8 @@ CREATE TABLE `acontece` (
   KEY `fk_acontececampeonatointer_idx` (`NombreCampeonatoInternacional`),
   CONSTRAINT `fk_acontececampeonatointer` FOREIGN KEY (`NombreCampeonatoInternacional`) REFERENCES `campeonatointernacional` (`Nombre`),
   CONSTRAINT `fk_acontecepartidointer` FOREIGN KEY (`HoraComienzo`, `DondeSeJuega`, `Fecha`) REFERENCES `partidointernacional` (`HoraComiezo`, `DondeSeJuega`, `Fecha`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+);
+
 
 --
 -- Dumping data for table `acontece`
@@ -87,8 +88,7 @@ CREATE TABLE `aparece` (
   KEY `fk_aparecepublicidad_idx` (`IdPublicidad`),
   CONSTRAINT `fk_aparecepublicidad` FOREIGN KEY (`IdPublicidad`) REFERENCES `publicidad` (`idPublicidad`),
   CONSTRAINT `fk_apareceusuario` FOREIGN KEY (`NombreUsuario`) REFERENCES `usuario` (`NombreUsuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+);
 
 --
 -- Dumping data for table `aparece`
@@ -114,8 +114,7 @@ CREATE TABLE `atleta` (
   `Descripcion` varchar(255) NOT NULL,
   PRIMARY KEY (`Nombre`,`Apellido`),
   KEY `idx_apellido` (`Apellido`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+);
 
 --
 -- Dumping data for table `atleta`
@@ -142,8 +141,7 @@ CREATE TABLE `campeonato` (
   `Descripcion` varchar(255) DEFAULT NULL,
   `Ubicacion` varchar(45) NOT NULL,
   PRIMARY KEY (`Nombre`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+);
 
 --
 -- Dumping data for table `campeonato`
@@ -166,8 +164,7 @@ CREATE TABLE `campeonatoclub` (
   `nombrecampeonato` varchar(45) NOT NULL,
   PRIMARY KEY (`nombrecampeonato`),
   CONSTRAINT `fk_nombrecampeonatoclub` FOREIGN KEY (`nombrecampeonato`) REFERENCES `campeonato` (`Nombre`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+);
 
 --
 -- Dumping data for table `campeonatoclub`
@@ -190,8 +187,7 @@ CREATE TABLE `campeonatointernacional` (
   `Nombre` varchar(45) NOT NULL,
   PRIMARY KEY (`Nombre`),
   CONSTRAINT `fk_NombreCampInter` FOREIGN KEY (`Nombre`) REFERENCES `campeonato` (`Nombre`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `campeonatointernacional`
@@ -221,8 +217,7 @@ CREATE TABLE `compite` (
   KEY `fk_compitepartidointer_idx` (`HoraComienzo`,`DondeSeJuega`,`Fecha`),
   CONSTRAINT `fk_compitepais` FOREIGN KEY (`CodigoPais`) REFERENCES `pais` (`CodigoPais`),
   CONSTRAINT `fk_compitepartidointer` FOREIGN KEY (`HoraComienzo`, `DondeSeJuega`, `Fecha`) REFERENCES `partidointernacional` (`HoraComiezo`, `DondeSeJuega`, `Fecha`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `compite`
@@ -248,8 +243,7 @@ CREATE TABLE `concurre` (
   KEY `fk_concurrecampint_idx` (`NombreCampeonatoInternacional`),
   CONSTRAINT `fk_concurrecampint` FOREIGN KEY (`NombreCampeonatoInternacional`) REFERENCES `campeonatointernacional` (`Nombre`),
   CONSTRAINT `fk_concurrepais` FOREIGN KEY (`CodPais`) REFERENCES `pais` (`CodigoPais`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `concurre`
@@ -276,8 +270,7 @@ CREATE TABLE `convocado` (
   KEY `fk_convocadopais_idx` (`CodPais`),
   CONSTRAINT `fk_convocadopais` FOREIGN KEY (`CodPais`) REFERENCES `pais` (`CodigoPais`),
   CONSTRAINT `fk_convocadoseleccionado` FOREIGN KEY (`NombreSeleccionado`, `ApellidoSeleccionado`) REFERENCES `seleccionado` (`Nombre`, `Apellido`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `convocado`
@@ -304,8 +297,7 @@ CREATE TABLE `cuenta` (
   KEY `fk_CuentaCodEquipo_idx` (`CodEquipo`),
   CONSTRAINT `fk_CuentaCodEquipo` FOREIGN KEY (`CodEquipo`) REFERENCES `equipo` (`CodigoEquipo`),
   CONSTRAINT `fk_CuentaStaff` FOREIGN KEY (`NombreStaff`, `ApellidoStaff`) REFERENCES `miembrostaff` (`Nombre`, `Apellido`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `cuenta`
@@ -329,8 +321,7 @@ CREATE TABLE `deportes` (
   `FotoDeporte` varchar(255) NOT NULL,
   `DuracionDePartidos` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`NombreDeporte`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `deportes`
@@ -356,8 +347,7 @@ CREATE TABLE `equipo` (
   `Logo` varchar(255) NOT NULL,
   PRIMARY KEY (`CodigoEquipo`),
   KEY `idx_CodigoEquipo` (`CodigoEquipo`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+);
 
 --
 -- Dumping data for table `equipo`
@@ -381,8 +371,7 @@ CREATE TABLE `evento` (
   `NombreEvento` varchar(45) NOT NULL,
   `Descripcion` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`IDEvento`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+);
 
 --
 -- Dumping data for table `evento`
@@ -415,8 +404,7 @@ CREATE TABLE `juega` (
   KEY `idx_juegaacerca` (`HoraComienzo`,`DondeSeJuega`,`Fecha`),
   CONSTRAINT `fk_CodigoEquipo` FOREIGN KEY (`CodigoEquipo`) REFERENCES `equipo` (`CodigoEquipo`),
   CONSTRAINT `fk_DondeHoraFecha` FOREIGN KEY (`DondeSeJuega`, `HoraComienzo`, `Fecha`) REFERENCES `partidos` (`DondeSeJuega`, `HoraComienzo`, `Fecha`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `juega`
@@ -442,8 +430,7 @@ CREATE TABLE `lee` (
   KEY `fk_leenoticia_idx` (`NombreNoticia`),
   CONSTRAINT `fk_leenoticia` FOREIGN KEY (`NombreNoticia`) REFERENCES `noticias` (`NombreNoticia`),
   CONSTRAINT `fk_leeusuario` FOREIGN KEY (`NombreUsuario`) REFERENCES `usuario` (`NombreUsuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `lee`
@@ -469,8 +456,7 @@ CREATE TABLE `llegan` (
   KEY `fk_lleganNotificaciones_idx` (`IdNotificacion`),
   CONSTRAINT `fk_lleganNotificaciones` FOREIGN KEY (`IdNotificacion`) REFERENCES `notificacion` (`idNotificacion`),
   CONSTRAINT `fk_lleganUsuario` FOREIGN KEY (`NombreUsuario`) REFERENCES `usuario` (`NombreUsuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `llegan`
@@ -494,8 +480,7 @@ CREATE TABLE `miembrostaff` (
   `Apellido` varchar(45) NOT NULL,
   `Trabajo` varchar(45) NOT NULL,
   PRIMARY KEY (`Nombre`,`Apellido`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `miembrostaff`
@@ -520,8 +505,7 @@ CREATE TABLE `noticias` (
   `Informacion` varchar(255) NOT NULL,
   `Imagen` varchar(45) NOT NULL,
   PRIMARY KEY (`NombreNoticia`,`Fecha`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `noticias`
@@ -545,8 +529,7 @@ CREATE TABLE `notificacion` (
   `Titulo` varchar(45) NOT NULL,
   `Descripcion` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`idNotificacion`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+);
 
 --
 -- Dumping data for table `notificacion`
@@ -574,8 +557,7 @@ CREATE TABLE `ocurren` (
   KEY `fk_ocurrencampeonatoclub_idx` (`NombreCampeonato`),
   CONSTRAINT `fk_ocurrencampeonatoclub` FOREIGN KEY (`NombreCampeonato`) REFERENCES `campeonatoclub` (`nombrecampeonato`),
   CONSTRAINT `fk_ocurrenpartidoclub` FOREIGN KEY (`HoraComienzo`, `DondeSeJuega`, `Fecha`) REFERENCES `partidosclub` (`HoraComienzo`, `DondeSeJuega`, `Fecha`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `ocurren`
@@ -600,8 +582,7 @@ CREATE TABLE `pais` (
   `NombrePais` varchar(45) NOT NULL,
   `Individual` tinyint(1) NOT NULL,
   PRIMARY KEY (`CodigoPais`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `pais`
@@ -627,8 +608,7 @@ CREATE TABLE `participan` (
   KEY `fk_ParticipanCampeonato_idx` (`NombreCampeonato`),
   CONSTRAINT `fk_codEquipoparticipan` FOREIGN KEY (`CodEquipo`) REFERENCES `equipo` (`CodigoEquipo`),
   CONSTRAINT `fk_ParticipanCampeonato` FOREIGN KEY (`NombreCampeonato`) REFERENCES `campeonatoclub` (`nombrecampeonato`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `participan`
@@ -657,8 +637,7 @@ CREATE TABLE `partidointernacional` (
   CONSTRAINT `fk_DondeInter` FOREIGN KEY (`DondeSeJuega`) REFERENCES `partidos` (`DondeSeJuega`),
   CONSTRAINT `fk_FechaInter` FOREIGN KEY (`Fecha`) REFERENCES `partidos` (`Fecha`),
   CONSTRAINT `fk_HoraInter` FOREIGN KEY (`HoraComiezo`) REFERENCES `partidos` (`HoraComienzo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `partidointernacional`
@@ -686,8 +665,7 @@ CREATE TABLE `partidos` (
   KEY `fk_Donde_idx` (`DondeSeJuega`),
   KEY `idx_Donde` (`DondeSeJuega`),
   KEY `idx_Fecha` (`Fecha`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `partidos`
@@ -716,8 +694,7 @@ CREATE TABLE `partidosclub` (
   CONSTRAINT `fk_Donde` FOREIGN KEY (`DondeSeJuega`) REFERENCES `partidos` (`DondeSeJuega`),
   CONSTRAINT `fk_Fecha` FOREIGN KEY (`Fecha`) REFERENCES `partidos` (`Fecha`),
   CONSTRAINT `fk_Hora` FOREIGN KEY (`HoraComienzo`) REFERENCES `partidos` (`HoraComienzo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `partidosclub`
@@ -746,8 +723,7 @@ CREATE TABLE `pasan` (
   KEY `fk_pasanjuega_idx` (`CodigoEquipo`,`HoraComienzo`,`DondeSeJuega`,`Fecha`),
   CONSTRAINT `fk_pasanevento` FOREIGN KEY (`IdEvento`) REFERENCES `evento` (`IDEvento`),
   CONSTRAINT `fk_pasanjuega` FOREIGN KEY (`CodigoEquipo`, `HoraComienzo`, `DondeSeJuega`, `Fecha`) REFERENCES `juega` (`CodigoEquipo`, `HoraComienzo`, `DondeSeJuega`, `Fecha`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `pasan`
@@ -774,8 +750,7 @@ CREATE TABLE `posee` (
   KEY `fk_poseepais_idx` (`CodPais`),
   CONSTRAINT `fk_poseepais` FOREIGN KEY (`CodPais`) REFERENCES `pais` (`CodigoPais`),
   CONSTRAINT `fk_poseestaff` FOREIGN KEY (`NombreStaff`, `ApellidoStaff`) REFERENCES `miembrostaff` (`Nombre`, `Apellido`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `posee`
@@ -801,8 +776,7 @@ CREATE TABLE `practican` (
   KEY `fk_nombredeportepractican_idx` (`NombreDeporte`),
   CONSTRAINT `fk_codequipopractican` FOREIGN KEY (`CodigoEquipo`) REFERENCES `equipo` (`CodigoEquipo`),
   CONSTRAINT `fk_nombredeportepractican` FOREIGN KEY (`NombreDeporte`) REFERENCES `deportes` (`NombreDeporte`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `practican`
@@ -827,8 +801,7 @@ CREATE TABLE `publicidad` (
   `URL` varchar(255) NOT NULL,
   `ImagenPublicidad` varchar(45) NOT NULL,
   PRIMARY KEY (`idPublicidad`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+);
 
 --
 -- Dumping data for table `publicidad`
@@ -855,8 +828,7 @@ CREATE TABLE `seleccionado` (
   KEY `idx_apellido` (`Apellido`),
   CONSTRAINT `fk_ApellidoSelec` FOREIGN KEY (`Apellido`) REFERENCES `atleta` (`Apellido`),
   CONSTRAINT `fk_NombreSelec` FOREIGN KEY (`Nombre`) REFERENCES `atleta` (`Nombre`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `seleccionado`
@@ -882,8 +854,7 @@ CREATE TABLE `sigue` (
   KEY `fk_equiposigue_idx` (`CodigoEquipo`),
   CONSTRAINT `fk_equiposigue` FOREIGN KEY (`CodigoEquipo`) REFERENCES `equipo` (`CodigoEquipo`),
   CONSTRAINT `fk_UsuarioSigue` FOREIGN KEY (`NombreUsuario`) REFERENCES `usuario` (`NombreUsuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `sigue`
@@ -910,8 +881,7 @@ CREATE TABLE `sobre` (
   KEY `fk_sobrenoticia_idx` (`NombreNoticias`,`FechaNoticia`),
   CONSTRAINT `fk_sobreDeporte` FOREIGN KEY (`NombreDeportes`) REFERENCES `deportes` (`NombreDeporte`),
   CONSTRAINT `fk_sobrenoticia` FOREIGN KEY (`NombreNoticias`, `FechaNoticia`) REFERENCES `noticias` (`NombreNoticia`, `Fecha`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `sobre`
@@ -940,8 +910,7 @@ CREATE TABLE `sucede` (
   KEY `fk_compitesucede_idx` (`CodPais`,`HoraComienzo`,`DondeSeJuega`,`Fecha`),
   CONSTRAINT `fk_compitesucede` FOREIGN KEY (`CodPais`, `HoraComienzo`, `DondeSeJuega`, `Fecha`) REFERENCES `compite` (`CodigoPais`, `HoraComienzo`, `DondeSeJuega`, `Fecha`),
   CONSTRAINT `fk_eventocompite` FOREIGN KEY (`IdEvento`) REFERENCES `evento` (`IDEvento`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `sucede`
@@ -967,8 +936,7 @@ CREATE TABLE `tiene` (
   KEY `fk_CodEquipoTiene_idx` (`CodigoEquipo`),
   CONSTRAINT `fk_CodEquipoTiene` FOREIGN KEY (`CodigoEquipo`) REFERENCES `equipo` (`CodigoEquipo`),
   CONSTRAINT `fk_NombreApellido` FOREIGN KEY (`NombreAtleta`, `ApellidoAtleta`) REFERENCES `atleta` (`Nombre`, `Apellido`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `tiene`
@@ -996,8 +964,7 @@ CREATE TABLE `usuario` (
   `TipoDePago` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`NombreUsuario`),
   UNIQUE KEY `Email_UNIQUE` (`Email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ;
 
 --
 -- Dumping data for table `usuario`

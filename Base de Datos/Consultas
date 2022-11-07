@@ -1,0 +1,9 @@
+/*Consulta 1*/
+select juega.Encuentro
+from juega, equipo, practican
+where practican.NombreDeporte = "Futbol" AND equipo.CodigoEquipo = juega.CodigoEquipo AND juega.Fecha = 2022-12-17;
+/*Consulta 2*/
+select NombreUsuario
+from usuario
+where Premiun = 1;
+/*Consulta 3*/
