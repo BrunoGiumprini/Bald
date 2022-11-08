@@ -379,7 +379,9 @@ DROP TABLE IF EXISTS `evento`;
 CREATE TABLE `evento` (
   `IDEvento` int NOT NULL AUTO_INCREMENT,
   `NombreEvento` varchar(45) NOT NULL,
-  `Descripcion` varchar(255) DEFAULT NULL,
+  `AtletaNombre` varchar(45) NOT NULL,
+  `AtletaApellido` varchar(45) NOT NULL,
+  `Minuto` int NOT NULL,
   PRIMARY KEY (`IDEvento`)
 ) ;
 /*!40101 SET character_set_client = @saved_cs_client */;
