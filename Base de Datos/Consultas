@@ -7,3 +7,10 @@ select NombreUsuario
 from usuario
 where Premiun = 1;
 /*Consulta 3*/
+SELECT NombreUsuario 
+FROM sigue,equipo
+where equipo.CodigoEquipo = sigue.CodigoEquipo AND sigue.CodigoEquipo=(select equipo.CodigoEquipo
+							                                                          from equipo
+							                                                          where equipo.Nombre ="Aguada");
+/*Consulta 4*/
+              
