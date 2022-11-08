@@ -13,4 +13,9 @@ where equipo.CodigoEquipo = sigue.CodigoEquipo AND sigue.CodigoEquipo=(select eq
 							                                                          from equipo
 							                                                          where equipo.Nombre ="Aguada");
 /*Consulta 4*/
-              
+select aparece.NombreUsuario
+from aparece, usuario
+where aparece.NombreUsuario=usuario.NombreUsuario AND aparece.IdPublicidad = 1;
+/* La publicidad dada es la de id 1 y estos son los usuarios que la ven*/
+/*Consulta 5*/
+
