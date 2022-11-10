@@ -2,20 +2,55 @@
 select juega.Encuentro
 from juega, equipo, practican
 where practican.NombreDeporte = "Futbol" AND equipo.CodigoEquipo = juega.CodigoEquipo AND juega.Fecha = 2022-12-17;
+
 /*Consulta 2*/
 select NombreUsuario
 from usuario
 where Premiun = 1;
+
 /*Consulta 3*/
 SELECT NombreUsuario 
 FROM sigue,equipo
 where equipo.CodigoEquipo = sigue.CodigoEquipo AND sigue.CodigoEquipo=(select equipo.CodigoEquipo
-							                                                          from equipo
-							                                                          where equipo.Nombre ="Aguada");
+	from equipo
+	where equipo.Nombre ="Aguada");
+
 /*Consulta 4*/
 select aparece.NombreUsuario
 from aparece, usuario
 where aparece.NombreUsuario=usuario.NombreUsuario AND aparece.IdPublicidad = 1;
 /* La publicidad dada es la de id 1 y estos son los usuarios que la ven*/
-/*Consulta 5*/
 
+/*Consulta 5*/
+select count(*), Deporte
+from campeonato
+where FechaFin > current_date() and FechaInicio < current_date()
+group by Deporte;
+
+/*Consulta 6*/
+select alineacion 
+from juega
+where Encuentro = "Manchester City vs Manchester United";
+
+/*Consulta 7*/
+
+/*Consulta 8*/
+select resultado.Puntaje 
+from resultado, ostenta
+where resultado.idResultado = ostenta.idResultado AND ostenta.idPartido = 2;
+
+/*Consulta 9*/
+select equipo.Nombre
+from equipo,participan
+where equipo.CodigoEquipo = participan.CodEquipo AND participan.NombreCampeonato = "Copa Libertadores De America" AND current_date() < (
+select campeonato.FechaFin
+from campeonato
+where campeonato.Nombre ="Copa Libertadores De America") AND current_date()>(
+select campeonato.FechaInicio
+from campeonato
+where campeonato.Nombre ="Copa Libertadores De America");
+
+/*Consulta 10*/
+select campeonato.Nombre, campeonato.Deporte, count(equipo.Nombre)
+from campeonato, equipo, participan
+where  participan.CodEquipo = equipo.CodigoEquipo AND campeonato.Nombre = participan.NombreCampeonato AND equipo.Individual = 1;
