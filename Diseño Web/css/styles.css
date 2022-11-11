@@ -44,6 +44,13 @@
     color: rgb(189, 189, 189);
 }
 
+.contenedor4{
+    display: flex;
+    float: right;
+    
+
+}
+
 .table{
    border: 0px;
 }
@@ -110,3 +117,34 @@
 .titulo{
     color: white;
 }
+
+.parent {
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.2fr repeat(3, 1fr) 0.2fr;
+    grid-template-rows: 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .div1 { grid-area: 1 / 2 / 2 / 3; }
+    .div2 { grid-area: 3 / 2 / 4 / 3; }
+    .div3 { grid-area: 5 / 2 / 6 / 3; }
+    .div4 { grid-area: 7 / 2 / 8 / 3; }
+    .div5 { grid-area: 9 / 2 / 10 / 3; }
+    .div6 { grid-area: 11 / 2 / 12 / 3; }
+    .div7 { grid-area: 13 / 2 / 14 / 3; }
+    .div8 { grid-area: 15 / 2 / 16 / 3; }
+    .div9 { grid-area: 17 / 2 / 18 / 3; }
+    .div10 { grid-area: 19 / 2 / 20 / 3; }
+    .div11 { grid-area: 21 / 2 / 22 / 3; }
+    .div12 { grid-area: 23 / 2 / 24 / 3; }
+    .div13 { grid-area: 25 / 2 / 26 / 3; }
+    .div14 { grid-area: 27 / 2 / 28 / 3; }
+    .div15 { grid-area: 29 / 2 / 30 / 3; }
+    .div16 { grid-area: 31 / 2 / 32 / 3; }
+    .div17 { grid-area: 33 / 2 / 34 / 3; }
+    .div18 { grid-area: 35 / 2 / 36 / 3; }
+    .div19 { grid-area: 37 / 2 / 38 / 3; }
+    .div20 { grid-area: 1 / 4 / 14 / 7; }
+    
+    
