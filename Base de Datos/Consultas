@@ -1,7 +1,7 @@
-/*Consulta 1*/
-select juega.Encuentro
-from juega, equipo, practican
-where practican.NombreDeporte = "Futbol" AND equipo.CodigoEquipo = juega.CodigoEquipo AND juega.Fecha = 2022-12-17;
+	/*Consulta 1*/
+SELECT juega.Encuentro
+FROM juega, ocurren, partidos, practican
+where juega.idPartido  = partidos.idPartido and ocurren.NombreCampeonato = practican.NombreCampeonato and practican.NombreDeporte = "Futbol" and partidos.Fecha = "2022-12-17";
 
 /*Consulta 2*/
 select NombreUsuario
@@ -22,15 +22,15 @@ where aparece.NombreUsuario=usuario.NombreUsuario AND aparece.IdPublicidad = 1;
 /* La publicidad dada es la de id 1 y estos son los usuarios que la ven*/
 
 /*Consulta 5*/
-select count(*), Deporte
-from campeonato
-where FechaFin > current_date() and FechaInicio < current_date()
-group by Deporte;
+select count(*), practican.NombreDeporte
+from campeonato,practican
+where campeonato.Nombre=practican.NombreCampeonato and FechaFin > current_date() and FechaInicio < current_date()
+group by practican.NombreDeporte;
 
 /*Consulta 6*/
-select alineacion 
-from juega
-where Encuentro = "Manchester City vs Manchester United";
+select atleta.Apellido, posiciona.Posicion
+from atleta,posiciona,juega
+where atleta.idAtleta = posiciona.idAtleta and posiciona.idPartido = juega.idPartido and posiciona.CodEquipo = juega.CodigoEquipo and juega.Encuentro = "Manchester City vs Manchester United";
 
 /*Consulta 7*/
 
