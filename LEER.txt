@@ -1,0 +1,11 @@
+Buenas tardes, este archivo fue creado con el fin de explicar la distribución de la información en estas carpetas.
+
+Documentación completa: Aquí se encuentra documentado el trabajo de TODAS las asignaturas de una forma ordenada por asignatura y por número de entrega. Fue organizado de esta forma para una mejor adaptación
+
+Carpetas: Las carpetas creadas contienen documentos con extensiones ejecutables, están organizadas por materia. (Si no hay una carpeta de una materia en particular es debido a que el trabajo realizado es de texto plano y se encuentra registrado en la documentación completa).
+
+Documento integrador: Documento estructurado predefinido y completado
+
+Gracias
+
+-- Saludos, BALD.
