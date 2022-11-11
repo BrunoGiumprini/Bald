@@ -27,6 +27,8 @@ body {
 	z-index: 2;
 }
 
+
+
 .tarjeta.active {
 	transform: rotateY(180deg);
 }
@@ -284,3 +286,4 @@ body {
 .formulario-tarjeta .btn-enviar:hover {
 	background: #1ed760;
 }
+
