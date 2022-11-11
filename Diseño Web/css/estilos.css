@@ -40,7 +40,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	box-shadow: 0 10px 10px 0 rgba(90,116,148,0.3);
+	box-shadow: 0 10px 10px 0 rgba(90, 148, 99, 0.3);
 }
 
 /* ---------- Tarjeta Delantera ----------*/
@@ -170,7 +170,7 @@ body {
 	top: -25px;
 	z-index: 3;
 	border-radius: 100%;
-	box-shadow: -5px 4px 8px rgba(24,56,182,0.4);
+	box-shadow: -5px 4px 8px rgba(24, 182, 79, 0.4);
 	padding: 5px;
 	transition: all .2s ease;
 	border: none;
@@ -190,7 +190,7 @@ body {
 	background: #fff;
 	width: 100%;
 	max-width: 700px;
-	padding: 150px 30px 30px 30px;
+	padding: 150px 55px 30px 30px;
 	border-radius: 10px;
 	position: relative;
 	top: -150px;
@@ -248,7 +248,7 @@ body {
 }
 
 .formulario-tarjeta .ccv {
-	min-width: 100px;
+	min-width: 90px;
 }
 
 .formulario-tarjeta .grupo-select {
